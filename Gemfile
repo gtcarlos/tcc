@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 # Authentication and authorization gems
 gem 'devise'
+gem 'cancan'
 
 gem 'pg'
 gem 'cucumber'
