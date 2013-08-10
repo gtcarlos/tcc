@@ -1,0 +1,4 @@
+class AddRolesMaskToUser < ActiveRecord::Migration
+  def change
+  end
+end

@@ -1,0 +1,14 @@
+TCC::Application.routes.draw do
+
+  resources :users
+  
+  #devise_for :users do
+    #get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
+  #end
+  
+  devise_for :users
+
+  root :to => 'users#index'
+
+  # match ':controller(/:action(/:id))(.:format)'
+end
