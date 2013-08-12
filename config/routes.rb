@@ -2,7 +2,7 @@ TCC::Application.routes.draw do
   devise_for :users
 
   resources :users
-  root :to => 'users#index'
+  root :to => 'home#show'
 
-  # match ':controller(/:action(/:id))(.:format)'
+  match 'home', to: 'home#show', via: :all
 end
