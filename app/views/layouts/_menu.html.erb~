@@ -1,6 +1,6 @@
 <div class="menu">
   <% if user_signed_in? %>
-	  <%= button_to "Logout", destroy_user_session_path, :method => :delete %>
+    <%= button_to "Logout", destroy_user_session_path %>
   <% else %>
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
       <div>
