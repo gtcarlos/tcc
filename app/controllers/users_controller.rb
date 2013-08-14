@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # Devise authorization needed before show up
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :new
 
   # CanCan authorization
   load_and_authorize_resource
