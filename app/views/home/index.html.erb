@@ -1,1 +1,28 @@
-Bem vindo ao Start Me!
+<div class="row-fluid">
+  <div class="container">
+    <div class="hero-unit">
+    <p><img src="assets/logo.png" id="logo"/></p>
+    <p>Bem-vindo(a) ao StartMe, o seu sistema para evoluir as suas ideias.</p>
+    <%= button_to "Cadastre-se »", root_path, :class => "btn btn-primary btn-large" %>
+  </div>
+  <div class="row-fluid">
+    <div class="span4">
+    <center>
+    <h3>Exponha Portifólios</h3></center>
+    <p>Com nossa vitrine online, usuários terão total acesso às suas ideias e trabalhos.</p>
+    <%= image_tag("home/1.jpg", class: "images") %>
+  </div>
+  <div class="span4">
+    <center>
+    <h3>Crie Vínculos e Contatos</h3></center>
+    <p>Para aumentar seu alcance e o impacto que seu produto fará no mercado.</p>
+    <%= image_tag("home/2.jpg", class: "images") %>
+  </div>
+  <div class="span4">
+      <center>
+      <h3>Invista nas Ideias</h3></center>
+      <p>Pequenas empresas com grandes ideias esperando para serem investidas.</p>
+      <%= image_tag("home/3.jpg", class: "images") %>
+    </div>
+  </div>
+</div>

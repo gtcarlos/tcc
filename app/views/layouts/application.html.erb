@@ -8,6 +8,23 @@
 </head>
 <body>
   <%= render "layouts/menu" %>
+
+  <div class="messages">
+    <% if flash[:notice]%>
+      <div class="alert alert-info">
+        <p class="error"><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+
+    <% if flash[:error]%>
+      <div class="alert alert-error">
+        <p class="error"><%= flash[:error] %></p>
+      </div>
+    <% end %>
+  </div>
+
   <%= yield %>
+
+  <%= render "layouts/footer" %>
 </body>
 </html>
