@@ -6,7 +6,7 @@ development:
   username: guilherme
   password: postgres
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: TCC_test
@@ -21,3 +21,6 @@ production:
   pool: 5
   username: guilherme
   password: postgres
+
+cucumber:
+  <<: *test

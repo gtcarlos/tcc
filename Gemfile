@@ -10,10 +10,14 @@ gem 'devise'
 gem 'cancan'
 gem 'role_model'
 
+# Database Gems
 gem 'pg'
-gem 'cucumber'
+
+# Test Gems
+gem 'cucumber-rails'
 gem 'capybara'
-gem 'rspec'
+gem 'rspec-rails'
+gem 'database_cleaner'
 
 # Gems used only for assets and not required
 # in production environments by default.
