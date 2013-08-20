@@ -1,45 +1,48 @@
 # language: pt
 
 Funcionalidade: Acessando o sistema
-  Como um usuário
+  Como um usuário não logado
   Com o objetivo de entrar no sistema
-  Eu deveria poder colocar meu e-mail e minha senha e ver a página inicial
+  Eu deveria poder colocar preencher meu e-mail e senha e ver a página inicial
 
   Cenário: E-mail e senha corretos
-    Dado que eu seja um usuário cadastrado
+    Dado que eu seja um usuário não logado
     E eu esteja na página inicial
-    Quando eu preencho o campo E-mail e o campo Senha corretamente
-    E clico em Entrar
+    Quando eu preencho o campo E-mail corretamente
+    E eu preencho o campo Senha corretamente
+    E eu clico em Entrar
     Então eu devo ver a página inicial
 
   Cenário: E-mail incorreto e senha correta
-    Dado que eu seja um usuário cadastrado
+    Dado que eu seja um usuário não logado
     E eu esteja na página inicial
-    Quando eu preencho o campo E-mail incorretamente e o campo Senha corretamente
-    E clico em Entrar
-    Então eu devo ver a página de cadastro de usuário
-    E uma mensagem de erro
+    Quando eu preencho o campo E-mail incorretamente
+    E eu preencho o campo Senha corretamente
+    E eu clico em Entrar
+    Então eu devo ver a página de acesso
+    #E eu devo ver uma mensagem de erro
 
   Cenário: E-mail correto e senha incorreta
-    Dado que eu seja um usuário cadastrado
+    Dado que eu seja um usuário não logado
     E eu esteja na página inicial
-    Quando eu preencho o campo E-mail corretamente e o campo Senha corretamente
-    E clico em Entrar
-    Então eu devo ver a página de cadastro de usuário
-    E uma mensagem de erro
+    Quando eu preencho o campo E-mail corretamente
+    E eu preencho o campo Senha incorretamente
+    E eu clico em Entrar
+    Então eu devo ver a página de acesso
+    #E eu devo ver uma mensagem de erro
 
-  Cenário: E-mail e senha incorretos
-    Dado que eu seja um usuário
+  Cenário: E-mail incorreto e senha incorreta
+    Dado que eu seja um usuário não logado
     E eu esteja na página inicial
-    Quando eu preencho o E-mail e o campo Senha incorretamente
-    E clico em Entrar
-    Então eu devo ver a página de cadastro de usuário
-    E uma mensagem de erro
+    Quando eu preencho o campo E-mail incorretamente
+    E eu preencho o campo Senha incorretamente
+    E eu clico em Entrar
+    Então eu devo ver a página de acesso
+    #E eu devo ver uma mensagem de erro
 
-  Cenário: E-mail não valido
-    Dado que eu seja um usuário
+  Cenário: E-mail não válido
+    Dado que eu seja um usuário não logado
     E eu esteja na página inicial
-    Quando eu preencho o campo E-mail com um e-mail não válido
-    E clico em entrar
+    Quando eu preencho o campo E-mail com valor não válido
+    E eu clico em Entrar
     Então eu devo ver uma mensagem de erro
-

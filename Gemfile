@@ -14,11 +14,12 @@ gem 'role_model'
 gem 'pg'
 
 # Test Gems
-gem 'cucumber-rails'
-gem 'capybara'
-gem 'rspec-rails'
-gem 'database_cleaner'
-
+group :test do
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
