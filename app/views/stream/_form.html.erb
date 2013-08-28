@@ -1,0 +1,23 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="titulo">
+    <%= f.text_field :title, :html => {:placeholder => "Título"} %>
+  </div>
+  <div id="conteudo">
+    <%= f.text_area :content, :html => {:placeholder => "Digite aqui sua publicação..."} %>
+  </div>
+  <div id="publicar">
+    <%= f.submit "Publicar"%>
+  </div>
+<% end %>

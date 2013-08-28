@@ -2,9 +2,9 @@ class HomeController < ApplicationController
   def show
    if user_signed_in?
      # redirect_to users_path
-     render "stream/index"
+     redirect_to stream_index_path
    else
-      render "home/index"
+      redirect_to home_index_path
    end
   end
 end

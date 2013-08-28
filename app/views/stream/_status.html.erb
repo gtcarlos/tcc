@@ -1,0 +1,7 @@
+<div id="status">
+  <%= form_for(@post) do |f| %>
+    <div>Título: <%= f.text_field :title %> </div>
+    <div><%= f.text_field :content %></div>
+    <div><%= f.submit "Publicar"%></div>
+  <% end %>
+</div>
