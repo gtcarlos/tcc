@@ -1,0 +1,9 @@
+<div id="posts">
+  <% @posts = Post.all %>
+  <% @posts.each do |p| %>
+    <div class="posts_stream">
+      <div id="post_titulo"><%= p.title %></div>
+      <div id="post_conteudo"><%= p.content %></div>
+    </div>
+  <% end %>
+</div>

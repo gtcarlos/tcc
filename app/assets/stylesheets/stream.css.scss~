@@ -14,7 +14,7 @@
   background: yellow;
  }
 
- .conteudo {
+ .status {
   background: pink;
  }
 

@@ -1,5 +1,5 @@
 <div class="status">
-  <%= form_for(@post) do |f|, :class => "postagem" %>
+  <%= form_for(@post) do |f| %>
     <div>Título: <%= f.text_field :title, :class => "titulo" %> </div>
     <div><%= f.text_field :content, :class => "conteudo" %></div>
     <div><%= f.submit "Publicar",:html => { :class => "btn" }%></div>
