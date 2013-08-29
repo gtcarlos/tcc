@@ -8,12 +8,18 @@ gem 'rails', '3.2.13'
 # Authentication and authorization gems
 gem 'devise'
 gem 'cancan'
+gem 'role_model'
 
+# Database Gems
 gem 'pg'
-gem 'cucumber'
-gem 'capybara'
-gem 'rspec'
 
+# Test Gems
+group :test do
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

@@ -12,6 +12,7 @@ gem 'role_model'
 
 # Database Gems
 gem 'pg'
+gem 'foreigner'
 
 # Test Gems
 group :test do

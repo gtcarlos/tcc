@@ -24,7 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
-    @post = Post.new
+    @post = current_user.posts.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(params[:post])
+    @post = current_user.posts.build(params[:post])
 
     respond_to do |format|
       if @post.save

@@ -2,25 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.posts_stream {
-  //
+
+// Status Publisher
+
+.status_session {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.post {
-  background: red;
+.status_session {
+    width: 515px;
 }
 
-.post:nth-of-type(odd) {
-  background: yellow;
+.status #titulo {
+  width: 500px;
+}
+
+.status #conteudo {
+  width: 500px;
+  height: 50px;
+}
+
+.actions {
+  text-align: right;
+}
+
+#btn_publicar {
+  margin: 0px;
+}
+
+
+// Posts
+
+.post #usuario {
+  text-align: left;
+  font-weight: bold;
+}
+
+#update {
+  background: #ffffff;
+  margin-bottom: 10px;
+  padding: 2px 2px 2px 2px;
+}
+
+.update {
+  border: 1px solid #babaca;
+}
+
+#post:nth-of-type(odd) {
+  background: #eeeeee;
  }
 
- .conteudo {
-  background: pink;
+.post #titulo {
  }
 
- .titulo {
-   width: 200px;
- }
-
- .btn {
- }
+.post #conteudo {
+  }

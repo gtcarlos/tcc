@@ -44,7 +44,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @stream_index, notice: 'Mensagem publicada' }
+        format.html { redirect_to stream_index_path, notice: 'Mensagem publicada' }
+        format.json { render json: @post, status: :create, location: stream_index_path }
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
