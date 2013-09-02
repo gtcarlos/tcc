@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    @user = current_user
+    @post = Post.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,8 +47,8 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to stream_index_path, notice: 'Mensagem publicada' }
-        format.json { render json: @post, status: :create, location: stream_index_path }
+        format.html { redirect_to posts_path, notice: 'Mensagem publicada' }
+        format.json { render json: @post, status: :create, location: posts_path }
       else
         format.html { render action: "new" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
