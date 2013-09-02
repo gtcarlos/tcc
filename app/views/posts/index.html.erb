@@ -4,7 +4,18 @@
     </div>
     <div class="span8" id="principal">
       <%= render :template => "posts/new" %>
-      <%= render "posts/posts" %>
+      <div class="posts" id="container">
+        <% @posts.each do |p| %>
+          <div class="post" id="update">
+          <div class="post" id="usuario"><%= p.user.name %></div>
+          <div class="post" id="titulo"><%= p.title %></div>
+          <div class="post" id="conteudo"><%= p.content %></div>
+          <div class="post" id="separator"><hr /></div>
+        <% end %>
+        <%= paginate @posts %>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
+  </div>
