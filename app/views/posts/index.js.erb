@@ -1,0 +1,2 @@
+$('#update').html('<%= escape_javascript render 'posts/posts') %>');
+$('#paginator').replaceWith('<%= escape_javascript(link_to_the_next_page @posts, 'Ver mais', :remote => true, :id => :more %>');

@@ -2,12 +2,13 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.page(params[:page]).per(5)
+    @posts = Post.order("created_at DESC").page(params[:page]).per(5)
     @user = current_user
     @post = Post.new
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js #index.js.erb
       format.json { render json: @posts }
     end
   end
