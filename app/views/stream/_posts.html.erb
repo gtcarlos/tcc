@@ -1,5 +1,4 @@
 <div class="posts" id="container">
-  <% @posts = Post.all %>
   <% @posts.each do |p| %>
     <div class="post" id="update">
       <div class="post" id="usuario"><%= p.user.name %></div>
