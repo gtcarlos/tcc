@@ -1,14 +1,11 @@
 TCC::Application.routes.draw do
 
-  resources :users
-  
-  #devise_for :users do
-    #get "/users/sign_out" => "devise/sessions#destroy", :as => :destroy_user_session
-  #end
-  
   devise_for :users
+  resources :users
+  resources :posts
+  resources :friendships, only: [:create, :destroy]
+  root :to => 'home#show'
 
-  root :to => 'users#index'
-
-  # match ':controller(/:action(/:id))(.:format)'
+  match 'home', to: 'home#show', via: :all
+  match 'home_index', to: 'home#index'
 end

@@ -4,10 +4,10 @@ class FriendshipController < ApplicationController
 
     if @friendship.save
       #redirect_to user_path(current_user.username), notice: 'Amigo adicionado com sucesso'
-      notice: 'Usuario seguido com sucesso'
+      redirect_to user_path(current_user), notice: 'Amigo adicionado com sucesso'
     else
       #redirect_to user_path(current_user.username), alert: 'Nao foi possivel seguir'
-      alert: 'Nao foi possivel seguir'
+      redirect_to user_path(current_user), alert: 'Nao foi possivel seguir'
     end
   end
 

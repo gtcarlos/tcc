@@ -1,9 +1,9 @@
 TCC::Application.routes.draw do
 
   devise_for :users
-  resources :stream
   resources :users
-  resources :posts
+  resources :posts, only: [:index, :create, :destroy]
+  resources :friendships, only: [:create, :destroy]
   root :to => 'home#show'
 
   match 'home', to: 'home#show', via: :all
