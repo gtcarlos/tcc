@@ -14,12 +14,13 @@
 </p>
 <p>
 <% unless current_user.friends.include?(@user) %>
-  <%= form_for :friend, :url => friendship_path do |f| %>
-    <%# f.hidden_field :friend_id, value user.id %>
-    <button class="btn btn-info btn-small">Seguir</button>
+  <%= form_for :friend, :url => friendship_index_path do |f| %>
+    <%= f.hidden_field :friend_id, value: @user.id %>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <button class="btn btn-info btn-small btn-seguir">Seguir</button>
   <% end %>
 <% else %>
-  <span>Ja esta seguindo</span>
+  <%= button_to 'Deixar de seguir', friendship_path, method: :delete, :friend_id => @user.id, class: 'btn btn-small btn-danger', confirm: 'Voce tem certeza?' %>
 <% end %>
 
 

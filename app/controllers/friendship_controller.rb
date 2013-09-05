@@ -3,17 +3,16 @@ class FriendshipController < ApplicationController
     @friendship = current_user.friendships.build(friend_id: params[:friend][:friend_id])
 
     if @friendship.save
-      #redirect_to user_path(current_user.username), notice: 'Amigo adicionado com sucesso'
-      redirect_to user_path(current_user), notice: 'Amigo adicionado com sucesso'
+      redirect_to user_path(current_user), notice: 'Usuario seguido com sucesso'
     else
-      #redirect_to user_path(current_user.username), alert: 'Nao foi possivel seguir'
       redirect_to user_path(current_user), alert: 'Nao foi possivel seguir'
     end
   end
 
   def destroy
-    @friendship = current_user.friendships.find(params[:id])
+    @friend_id = params[:friend_id]
+    @friendship = current_user.friendships.find(:all, :conditions => ["friend_id = ?", @friend_id]).first
     @friendship.destroy
-    #redirect_to user_path(current_user.username), alert: 'Usuario removido com sucesso'
-    alert: 'Usuario removido com sucesso'
+    redirect_to user_path(current_user), alert: 'Usuario removido com sucesso'
+  end
 end
