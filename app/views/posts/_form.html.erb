@@ -19,6 +19,7 @@
     <%= f.text_area :content, :class => "status", :id => "conteudo", :placeholder => "O que voce esta pensando?" %>
   </div>
   <div class="actions">
+    <%= hidden_field_tag :user_id, current_user.id %>
     <%= f.submit "Publicar", :class => "btn", :id => "btn_publicar" %>
   </div>
 <% end %>
