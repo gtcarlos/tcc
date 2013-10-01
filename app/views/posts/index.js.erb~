@@ -1,2 +1,0 @@
-$('#update').html('<%= escape_javascript render 'posts/posts') %>');
-$('#paginator').replaceWith('<%= escape_javascript(paginate(@posts, :remote => true).to_s) %>');
