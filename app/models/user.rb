@@ -23,4 +23,9 @@ class User < ActiveRecord::Base
   roles_attribute :roles_mask
 
   roles :admin, :default
+
+  def timeline
+    Post.includes(:user).where(user_id: Friendship.where(user_id: self.id).pluck(:friend_id) << self.id).order("created_at desc")
+  end
+
 end
