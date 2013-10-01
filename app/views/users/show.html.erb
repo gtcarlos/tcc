@@ -1,19 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<div>
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+  <h2><%= @user.name %></h1>
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
-</p>
-<p>
-  <b>Role</b>
-  <%= @user.roles_mask %>
-</p>
-<p>
-<% unless current_user.friends.include?(@user) %>
+<% unless current_user.friends.include?(@user)%>
   <%= form_for :friend, :url => friendship_index_path do |f| %>
     <%= f.hidden_field :friend_id, value: @user.id %>
     <%= f.hidden_field :user_id, value: current_user.id %>
@@ -22,7 +13,11 @@
 <% else %>
   <%= button_to 'Deixar de seguir', friendship_path, method: :delete, :friend_id => @user.id, class: 'btn btn-small btn-danger', confirm: 'Voce tem certeza?' %>
 <% end %>
+</p>
+<div class="posts" id="container">
+  <h3>Postagens</h3>
+  <% @posts = @user.posts %>
+  <%= render "posts/posts" %>
+</div>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

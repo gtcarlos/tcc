@@ -1,11 +1,18 @@
 <div class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <div class="nav-collapse collapse">
-        <div class="navbar-form pull-right">
-          <% if user_signed_in? %>
-            <%= button_to "Sair", destroy_user_session_path, :method => :delete, :class => "btn", :id => "sair" %>
-        <% else %>
+      <a class="brand" href="/">StartMe</a>
+      <% if user_signed_in? %>
+        <ul class="nav">
+          <li><a href="/">Início</a></li>
+          <li><a href="/users">Usuários</a></li>
+          <li><a href="/">Configurações</a></li>
+        </ul>
+            <div class="navbar-form pull-right">
+                <%= link_to "Sair", destroy_user_session_path, :method => :delete, :class => "btn", :id => "sair" %>
+            </div>
+          <% else %>
+            <div class="navbar-form pull-right">
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div>
             <%= f.email_field :email, :autofocus => true, :id => "email", :placeholder => "E-mail" %>
