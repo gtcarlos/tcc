@@ -26,6 +26,7 @@
   
   <div class="container">
     <section id="sidebar">
+      <%= 50.times puts "a" %>
     </section>
     <section id="content">
       <%= yield %>

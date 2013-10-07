@@ -29,6 +29,7 @@ header#page_helper {
 }
 
 footer#page_footer {
+    text-align: center;
     color: #000000;
     font-size: 0.7em;
     height: 100px;
@@ -55,8 +56,18 @@ footer#page_footer {
         }
         &:hover {
           color: #fff;
+        }
       }
     }
   }
 }
 
+section#content {
+  float: right;
+}
+
+section#sidebar {
+  float: left;
+  margin-left: -20px;
+  width: 300px;
+}
