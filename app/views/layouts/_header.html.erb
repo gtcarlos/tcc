@@ -1,0 +1,20 @@
+<header>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="logo pull-left"><%= link_to(image_tag("header/logo.png", alt: "StartMe", id: "logo_header"), root_url) %></div>
+      <% if user_signed_in? %>
+        <%= render "layouts/menu" %>
+      <% else %>
+        <div class="navbar-form pull-right" id="login">
+          <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+          <div class="login_form">
+            <%= f.email_field :email, :autofocus => true, :id => "email", :placeholder => "E-mail" %>
+            <%= f.password_field :password, :id => "password", :placeholder => "Senha" %>
+            <%= f.submit "Entrar", :id => "login", :class => "btn" %>
+          </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</header>
