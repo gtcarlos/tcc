@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>StartMe</title>
-    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
@@ -12,17 +12,8 @@
 
     <%= render 'layouts/messages' %>
 
-    <div class="container">
-      <% if user_signed_in? %>
-        <section id="sidebar">
-          <%= render 'layouts/sidebar'%>
-      </section>
-    <% end %>
-    <section id="content">
-      <%= yield %>
-    </section>
-  <div>
+    <%= render 'layouts/container' %>
 
-  <%= render "layouts/footer" %>
+    <%= render 'layouts/footer' %>
 </body>
 </html>

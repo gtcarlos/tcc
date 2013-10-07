@@ -62,13 +62,16 @@ footer#page_footer {
   }
 }
 
-section#content {
-  float: right;
+div#container {
+  float: left;
+  overflow: hidden;
+  section {
+    float: left;
+
+    #sidebar {
+
+    }
+  }
 }
 
-section#sidebar {
-  float: left;
-  margin-left: -20px;
-  height: 100%;
-  width: 300px;
-}
+
