@@ -55,7 +55,6 @@ footer#page_footer {
         }
         &:hover {
           color: #fff;
-        }
       }
     }
   }
