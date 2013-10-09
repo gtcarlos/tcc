@@ -62,16 +62,10 @@ footer#page_footer {
   }
 }
 
-div#container {
+nav#sidebar {
+  background-color: #babaca;
   float: left;
-  overflow: hidden;
-  section {
-    float: left;
-
-    #sidebar {
-
-    }
-  }
+  width: 250px;
+  padding-top: 25px;
+  text-align: center;
 }
-
-

@@ -1,10 +1,8 @@
-<div id="container">
-  <% if user_signed_in? %>
-    <section id="sidebar">
-      <%= render 'layouts/sidebar' %>
-    </section>
-  <% end %>
-    <section id="content">
-    <%= yield %>
-    </section >
-</div>
+<% if user_signed_in? %>
+  <nav id="sidebar">
+    <%= render 'layouts/sidebar' %>
+  </nav>
+<% end %>
+<section id="content">
+  <%= yield %>
+</section >
