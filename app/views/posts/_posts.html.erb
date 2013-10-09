@@ -2,7 +2,7 @@
 <section class="post" id="update">
   <header class="post" id="usuario">
     <div id="left" style="float:left"><%= link_to p.user.name, user_path(p.user.id) %></div>
-    <div id="right" style="text-align: right"><%= p.created_at %></div>
+    <div id="right" style="text-align: right"><%= p.created_at.strftime('%d/%m/%Y - %H:%M:%S:%p') %></div>
   </header>
   <h4 id="titulo"><%= p.title %></h4>
   <p class="post" id="conteudo"><%= p.content %></p>
