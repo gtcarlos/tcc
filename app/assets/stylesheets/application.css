@@ -13,9 +13,10 @@
  *= require layout
  *= require_tree
  */
-/*
+
 body {
-  padding-top: 60px;
+  padding-top: 100px;
+  //background-color: yellow;
 }
 
 .messages {
@@ -75,10 +76,6 @@ body {
  }
 
 .post #conteudo {
-  } */
+  }
 
 html {overflow-y: scroll;}
-
-body{
-  padding-top: 100px;
-}
