@@ -1,6 +1,10 @@
 TCC::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+
   devise_for :users
+  ActiveAdmin.routes(self)
   resources :users
   resources :posts, only: [:index, :create, :destroy]
   resources :friendship, only: [:create, :destroy]

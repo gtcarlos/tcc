@@ -4,16 +4,16 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'activeadmin'
+gem 'activeadmin', github: "gregbell/active_admin"
 
 
 gem 'jquery-rails'
-
+gem "jquery-ui-rails"
 # Paginate gem
 gem 'kaminari'
 
 # Authentication and authorization gems
-gem 'devise'
+gem 'devise', '3.0'
 gem 'cancan'
 gem 'role_model'
 
