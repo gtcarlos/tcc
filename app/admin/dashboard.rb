@@ -5,7 +5,7 @@ ActiveAdmin.register_page "Dashboard" do
   content :title => proc{ I18n.t("active_admin.dashboard") } do
 
     panel "Usuarios Recentes" do
-      table_for User.order("created_at desc").limit(5) do
+      table_for User.order("created_at desc").limit(3) do
         column "Nome", :name
         column "Criado em", :created_at
       end
@@ -13,7 +13,7 @@ ActiveAdmin.register_page "Dashboard" do
     end
 
     panel "Postagens Recentes" do
-      table_for Post.order("created_at desc").limit(5) do
+      table_for Post.order("created_at desc").limit(3) do
         column "Titulo", :title
         column "Autor", :user
         column "Criado em", :created_at
