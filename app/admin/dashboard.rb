@@ -18,7 +18,7 @@ ActiveAdmin.register_page "Dashboard" do
         column "Autor", :user
         column "Criado em", :created_at
       end
-      strong { link_to "Ver todas as postagens", admin_posts_path }
+      strong { link_to "Ver todas as postagens", admin_postagens_path }
     end
 
   end
