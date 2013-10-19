@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @interest.type %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @interest.state %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @interest.city %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%= @interest.region %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @interest.area %>
+</p>
+
+<p>
+  <b>Number employees:</b>
+  <%= @interest.number_employees %>
+</p>
+
+<p>
+  <b>Foundation time:</b>
+  <%= @interest.foundation_time %>
+</p>
+
+<p>
+  <b>Number investors:</b>
+  <%= @interest.number_investors %>
+</p>
+
+<p>
+  <b>Invested startups:</b>
+  <%= @interest.invested_startups %>
+</p>
+
+<p>
+  <b>Investor groups:</b>
+  <%= @interest.investor_groups %>
+</p>
+
+<p>
+  <b>Linked startups:</b>
+  <%= @interest.linked_startups %>
+</p>
+
+
+<%= link_to 'Edit', edit_interest_path(@interest) %> |
+<%= link_to 'Back', interests_path %>

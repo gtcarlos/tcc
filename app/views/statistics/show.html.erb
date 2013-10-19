@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hits:</b>
+  <%= @statistic.hits %>
+</p>
+
+<p>
+  <b>Published posts:</b>
+  <%= @statistic.published_posts %>
+</p>
+
+<p>
+  <b>Post views:</b>
+  <%= @statistic.post_views %>
+</p>
+
+<p>
+  <b>Post shared:</b>
+  <%= @statistic.post_shared %>
+</p>
+
+
+<%= link_to 'Edit', edit_statistic_path(@statistic) %> |
+<%= link_to 'Back', statistics_path %>

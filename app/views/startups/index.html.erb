@@ -1,0 +1,37 @@
+<h1>Listing startups</h1>
+
+<table>
+  <tr>
+    <th>Fantasy name</th>
+    <th>Cnpj duns</th>
+    <th>Logo</th>
+    <th>Contact</th>
+    <th>Area</th>
+    <th>Location</th>
+    <th>Files</th>
+    <th>Message limit</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @startups.each do |startup| %>
+  <tr>
+    <td><%= startup.fantasy_name %></td>
+    <td><%= startup.cnpj_duns %></td>
+    <td><%= startup.logo %></td>
+    <td><%= startup.contact %></td>
+    <td><%= startup.area %></td>
+    <td><%= startup.location %></td>
+    <td><%= startup.files %></td>
+    <td><%= startup.message_limit %></td>
+    <td><%= link_to 'Show', startup %></td>
+    <td><%= link_to 'Edit', edit_startup_path(startup) %></td>
+    <td><%= link_to 'Destroy', startup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Startup', new_startup_path %>

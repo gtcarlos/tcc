@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @investor_group.name %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @investor_group.area %>
+</p>
+
+<p>
+  <b>Privacy:</b>
+  <%= @investor_group.privacy %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @investor_group.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_investor_group_path(@investor_group) %> |
+<%= link_to 'Back', investor_groups_path %>

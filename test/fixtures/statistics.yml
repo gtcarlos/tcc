@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hits: 1
+  published_posts: 1
+  post_views: 1
+  post_shared: 1
+
+two:
+  hits: 1
+  published_posts: 1
+  post_views: 1
+  post_shared: 1

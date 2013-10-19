@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  flag: MyString
+  name: MyString
+  number: MyString
+  date: 2013-10-19 10:36:09
+  seg_cod: 1
+
+two:
+  flag: MyString
+  name: MyString
+  number: MyString
+  date: 2013-10-19 10:36:09
+  seg_cod: 1

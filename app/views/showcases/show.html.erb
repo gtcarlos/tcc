@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @showcase.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @showcase.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_showcase_path(@showcase) %> |
+<%= link_to 'Back', showcases_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fantasy name:</b>
+  <%= @startup.fantasy_name %>
+</p>
+
+<p>
+  <b>Cnpj duns:</b>
+  <%= @startup.cnpj_duns %>
+</p>
+
+<p>
+  <b>Logo:</b>
+  <%= @startup.logo %>
+</p>
+
+<p>
+  <b>Contact:</b>
+  <%= @startup.contact %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @startup.area %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @startup.location %>
+</p>
+
+<p>
+  <b>Files:</b>
+  <%= @startup.files %>
+</p>
+
+<p>
+  <b>Message limit:</b>
+  <%= @startup.message_limit %>
+</p>
+
+
+<%= link_to 'Edit', edit_startup_path(@startup) %> |
+<%= link_to 'Back', startups_path %>

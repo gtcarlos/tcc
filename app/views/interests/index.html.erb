@@ -1,0 +1,43 @@
+<h1>Listing interests</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Region</th>
+    <th>Area</th>
+    <th>Number employees</th>
+    <th>Foundation time</th>
+    <th>Number investors</th>
+    <th>Invested startups</th>
+    <th>Investor groups</th>
+    <th>Linked startups</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @interests.each do |interest| %>
+  <tr>
+    <td><%= interest.type %></td>
+    <td><%= interest.state %></td>
+    <td><%= interest.city %></td>
+    <td><%= interest.region %></td>
+    <td><%= interest.area %></td>
+    <td><%= interest.number_employees %></td>
+    <td><%= interest.foundation_time %></td>
+    <td><%= interest.number_investors %></td>
+    <td><%= interest.invested_startups %></td>
+    <td><%= interest.investor_groups %></td>
+    <td><%= interest.linked_startups %></td>
+    <td><%= link_to 'Show', interest %></td>
+    <td><%= link_to 'Edit', edit_interest_path(interest) %></td>
+    <td><%= link_to 'Destroy', interest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Interest', new_interest_path %>

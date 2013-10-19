@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  date: 2013-10-19 11:23:24
+  privacy: 1
+  local: MyString
+  description: MyText
+  image: MyString
+
+two:
+  name: MyString
+  date: 2013-10-19 11:23:24
+  privacy: 1
+  local: MyString
+  description: MyText
+  image: MyString

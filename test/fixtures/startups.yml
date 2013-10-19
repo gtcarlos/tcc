@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fantasy_name: MyString
+  cnpj_duns: MyString
+  logo: MyString
+  contact: MyString
+  area: 
+  location: MyString
+  files: 
+  message_limit: 1
+
+two:
+  fantasy_name: MyString
+  cnpj_duns: MyString
+  logo: MyString
+  contact: MyString
+  area: 
+  location: MyString
+  files: 
+  message_limit: 1

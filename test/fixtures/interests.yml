@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 1
+  state: 1
+  city: 1
+  region: 1
+  area: 1
+  number_employees: 1
+  foundation_time: 2013-10-19 11:19:33
+  number_investors: 1
+  invested_startups: 1
+  investor_groups: 1
+  linked_startups: 1
+
+two:
+  type: 1
+  state: 1
+  city: 1
+  region: 1
+  area: 1
+  number_employees: 1
+  foundation_time: 2013-10-19 11:19:33
+  number_investors: 1
+  invested_startups: 1
+  investor_groups: 1
+  linked_startups: 1

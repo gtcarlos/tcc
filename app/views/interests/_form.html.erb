@@ -1,0 +1,61 @@
+<%= form_for(@interest) do |f| %>
+  <% if @interest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@interest.errors.count, "error") %> prohibited this interest from being saved:</h2>
+
+      <ul>
+      <% @interest.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :type %><br />
+    <%= f.number_field :type %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br />
+    <%= f.number_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.number_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br />
+    <%= f.number_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.number_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :number_employees %><br />
+    <%= f.number_field :number_employees %>
+  </div>
+  <div class="field">
+    <%= f.label :foundation_time %><br />
+    <%= f.datetime_select :foundation_time %>
+  </div>
+  <div class="field">
+    <%= f.label :number_investors %><br />
+    <%= f.number_field :number_investors %>
+  </div>
+  <div class="field">
+    <%= f.label :invested_startups %><br />
+    <%= f.number_field :invested_startups %>
+  </div>
+  <div class="field">
+    <%= f.label :investor_groups %><br />
+    <%= f.number_field :investor_groups %>
+  </div>
+  <div class="field">
+    <%= f.label :linked_startups %><br />
+    <%= f.number_field :linked_startups %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

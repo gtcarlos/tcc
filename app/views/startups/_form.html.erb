@@ -1,0 +1,49 @@
+<%= form_for(@startup) do |f| %>
+  <% if @startup.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@startup.errors.count, "error") %> prohibited this startup from being saved:</h2>
+
+      <ul>
+      <% @startup.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fantasy_name %><br />
+    <%= f.text_field :fantasy_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cnpj_duns %><br />
+    <%= f.text_field :cnpj_duns %>
+  </div>
+  <div class="field">
+    <%= f.label :logo %><br />
+    <%= f.text_field :logo %>
+  </div>
+  <div class="field">
+    <%= f.label :contact %><br />
+    <%= f.text_field :contact %>
+  </div>
+  <div class="field">
+    <%= f.label :area %><br />
+    <%= f.text_field :area %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :files %><br />
+    <%= f.text_field :files %>
+  </div>
+  <div class="field">
+    <%= f.label :message_limit %><br />
+    <%= f.number_field :message_limit %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
