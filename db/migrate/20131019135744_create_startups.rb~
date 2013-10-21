@@ -5,7 +5,7 @@ class CreateStartups < ActiveRecord::Migration
       t.string :cnpj_duns
       t.string :logo
       t.string :contact
-      t.integer :area
+      t.int :area
       t.string :location
       t.binary :files
       t.integer :message_limit

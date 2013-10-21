@@ -4,7 +4,7 @@ class CreateInvestors < ActiveRecord::Migration
       t.string :name
       t.string :company
       t.string :location
-      t.integer :area
+      t.int :area
       t.string :history
       t.text :bio
 
