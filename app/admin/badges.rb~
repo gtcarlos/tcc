@@ -1,0 +1,10 @@
+ActiveAdmin.register Badges do
+  menu :parent => "Administrador"
+
+  actions :all
+
+  index do
+    column "ID", :id
+    #column
+  end
+end

@@ -9,17 +9,24 @@ class User < ActiveRecord::Base
 
   include RoleModel
 
+  # Posts
   has_many :posts
 
+  # Friendship
   has_many :friendships
   has_many :friends, :through => :friendships
 
   has_many :inverse_friendships, :class_name => "Friendship", :foreign_key => "friend_id"
   has_many :inverse_friends, :through => :inverse_friendships, :source => :user
 
+  # Reports
   has_many :reports
 
+  # Payments
   has_many :payments
+
+  # Badges
+  has_many :badges
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask
