@@ -18,4 +18,15 @@ ActiveAdmin.register Badge do
   filter :name, :label => "Nome"
   filter :description, :label => "Descricao"
   filter :created_at, :label => "Criado em"
+
+  form do |f|
+   f.inputs "Detalhes" do
+    f.input :name, :label => "Nome"
+    f.input :description, :label => "Descricao"
+   end
+   f.inputs "Imagem" do
+    f.input :image, :label => "Imagem"
+   end
+    f.buttons
+  end
 end
