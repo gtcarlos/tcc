@@ -1,5 +1,10 @@
+# encoding: utf-8
+
 ActiveAdmin.register Post do
-  menu :priority => 2, :label => "Postagens"
+
+  config.clear_action_items!
+
+  menu :parent => "Usuario Comum", :priority => 2, :label => "Postagens"
 
   actions :all, except: [:edit]
   index do

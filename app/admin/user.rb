@@ -1,8 +1,10 @@
 ActiveAdmin.register User, :as => "Usuario" do
-  
+ 
+  config.clear_action_items!
+
   menu :parent => "Usuario Comum", :priority => 1, :label => "Usuarios"
 
-  actions :all, except: [:edit]
+  actions :all, except: [:new,:edit]
   config.sort_order = "created_at desc"
 
   index do
@@ -15,10 +17,6 @@ ActiveAdmin.register User, :as => "Usuario" do
     column "Nivel de Acesso", :roles_mask
     actions :html => {:class => "actions"}
    end
-
-  show do
-  row "ID", :id
-  end
 
   filter :name
   filter :email
