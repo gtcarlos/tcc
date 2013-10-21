@@ -1,5 +1,7 @@
 ActiveAdmin.register User, :as => "Usuario" do
-  
+ 
+  config.clear_action_items!
+
   menu :parent => "Usuario Comum", :priority => 1, :label => "Usuarios"
 
   actions :all, except: [:new,:edit]
@@ -16,9 +18,9 @@ ActiveAdmin.register User, :as => "Usuario" do
     actions :html => {:class => "actions"}
    end
 
-  filter :name
-  filter :email
-  filter :created_at
-  filter :roles_mask
+  filter :name, :label => "Nome"
+  filter :email, :label => "E-Mail"
+  filter :created_at, :label => "Criado em"
+  filter :roles_mask, :label => "Nivel de Acesso", :as => :select
 
 end

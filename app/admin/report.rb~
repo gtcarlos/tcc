@@ -4,7 +4,7 @@ ActiveAdmin.register Report, :as => "Denuncias" do
   
   config.clear_action_items!
 
-  menu :parent => "Usuario Comum ", :label => "Denuncias"
+  menu :parent => "Usuario Comum", :label => "Denuncias"
 
   actions :all, except: [:new, :edit]
 

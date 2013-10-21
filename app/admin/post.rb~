@@ -1,19 +1,25 @@
+# encoding: utf-8
+
 ActiveAdmin.register Post do
 
   config.clear_action_items!
 
   menu :parent => "Usuario Comum", :priority => 2, :label => "Postagens"
 
-  actions :all, except: [:edit]
+  actions :all, except: [:new, :edit]
   index do
-    column :title
-    column :content
-    column :user do |user|
+    column "Titulo", :title
+    column "Conteudo", :content
+    column "Usuario", :user do |user|
       link_to user.user.name, admin_usuarios_path(user)
     end
-    column :created_at, :sortable => :crated_at do |post|
+    column "Criado em", :created_at, :sortable => :crated_at do |post|
       post.created_at.strftime('%d/%m/%Y - %H:%M:%S:%p')
     end
     actions
   end
+
+  filter :title, :label => "Titulo"
+  filter :user, :label => "Usuario"
+  filter :created_at, :label => "Criado em"
 end
