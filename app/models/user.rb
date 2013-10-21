@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
 
   has_many :reports
 
+  has_many :payments
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask
 
