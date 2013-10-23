@@ -28,6 +28,12 @@ class User < ActiveRecord::Base
   # Badges
   has_many :badges
 
+  # Groups
+  belongs_to :user
+
+  # Functionalities
+  has_many :functionalities, :through => :group
+
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask
 

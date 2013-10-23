@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-ActiveAdmin.register Post do
+ActiveAdmin.register Post, :as => "Postagens" do
 
   config.clear_action_items!
 
