@@ -25,8 +25,19 @@ ActiveAdmin.register Badge do
     f.input :description, :label => "Descricao"
    end
    f.inputs "Imagem" do
-    f.input :image, :label => "Imagem"
+    f.input :image, :label => "Seleciona a imagem desejada (Tamanho maximo: 5mb)", :as => :file
    end
     f.buttons
+  end
+
+  show do |badge|
+    attributes_table do
+      row :name
+      row :description
+      row :created_at
+      row :image do
+        image_tag badge.image.url
+      end
+    end
   end
 end
