@@ -12,8 +12,8 @@ ActiveAdmin.register Group do
   show do
   end
 
-  for do |f|
-  end
+  #for do |f|
+  #end
 
   filter :name, :label => "Nome"
 

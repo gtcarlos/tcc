@@ -21,8 +21,9 @@ gem 'cancan'
 gem 'role_model'
 
 # Database Gems
-gem 'pg'
+gem 'pg', '0.17'
 gem 'foreigner'
+gem 'execjs'
 
 # Test Gems
 group :test do
