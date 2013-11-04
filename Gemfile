@@ -10,8 +10,11 @@ gem 'activeadmin', github: "gregbell/active_admin"
 gem 'paperclip'
 gem "cocaine" 
 
+# Front-End Gems
 gem 'jquery-rails'
 gem "jquery-ui-rails"
+gem "font-awesome-rails"
+
 # Paginate gem
 gem 'kaminari'
 

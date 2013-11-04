@@ -8,12 +8,21 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'layouts/header' %>
+		
+		<div class="span12">
+      <%= render 'layouts/header' %>
+		</div>
+		
+		<div class="span12">
+      <%= render 'layouts/messages' %>
+		</div>
+    
+		<div class="span12">
+		  <%= render 'layouts/container' %>
+		</div>
 
-    <%= render 'layouts/messages' %>
-
-    <%= render 'layouts/container' %>
-
-    <%= render 'layouts/footer' %>
+		<div class="span12">
+      <%= render 'layouts/footer' %>
+		</div>
 </body>
 </html>
