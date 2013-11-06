@@ -1,4 +1,4 @@
-<div class="status"  id="container">
+<div class="status">
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -11,16 +11,16 @@
       </ul>
     </div>
   <% end %>
-  <div class="status_session">
+  <div class="status session">
   <div class="field">
-    <%= f.text_field :title, :class => "status", :id => "titulo", :placeholder => "Titulo da publicacao" %>
+    <%= f.text_field :title, :id => "titulo", :placeholder => "Titulo da publicacao" %>
   </div>
   <div class="field">
-    <%= f.text_area :content, :class => "status", :id => "conteudo", :placeholder => "O que voce esta pensando?" %>
+    <%= f.text_area :content, :id => "conteudo", :placeholder => "O que voce esta pensando?" %>
   </div>
   <div class="actions">
     <%= hidden_field_tag :user_id, current_user.id %>
-    <%= f.submit "Publicar", :class => "btn", :id => "btn_publicar" %>
+    <%= f.submit "Publicar", :class => "btn", :id => "publicar" %>
   </div>
 <% end %>
   </div>
