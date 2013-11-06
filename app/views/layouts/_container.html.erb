@@ -1,12 +1,27 @@
-<% if user_signed_in? %>
-  <nav class="span3">
-    <%= render 'layouts/sidebar' %>
-  </nav>
-<% end %>
-<div class="span8">
-  <section class="widget">
-	  <div class="widget-content">
-      <%= yield %>
-	  </div>
-  </section >
-</div>
+<div id="content">
+	<div class="container">
+		
+		<div id="messages">
+			<%= render 'layouts/messages' %>
+		</div> <!-- messages -->
+
+		<div class="row">
+			
+			<% if user_signed_in? %>
+			<nav class="span3">
+				<%= render 'layouts/sidebar' %>
+			</nav> <!-- span3 -->
+			<% end %>
+
+			<div class="span9">
+				<div class="widget">
+					<div class="widget-header"></div>
+					<div class="widget-content">
+						<%= yield %>
+					</div> <!-- widget-content -->
+				</div> <!-- widget -->
+			</div> <!-- span9 -->
+
+		</div> <!-- row -->
+	</div> <!-- container -->
+</div> <!-- content -->
