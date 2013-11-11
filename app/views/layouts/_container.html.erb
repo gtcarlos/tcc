@@ -1,23 +1,29 @@
 <div id="content">
 	<div class="container">
-		
+
 		<div id="messages">
 			<%= render 'layouts/messages' %>
 		</div> <!-- messages -->
 
 		<div class="row">
-			
+
 			<% if user_signed_in? %>
 			<nav class="span3">
 				<%= render 'layouts/sidebar' %>
 			</nav> <!-- span3 -->
 			<% end %>
 
+<<<<<<< HEAD
 			<div class="span9">
 				<div class="widget">
 						<%= yield %>
 				</div> <!-- widget -->
 			</div> <!-- span9 -->
+=======
+			<session class="span9">
+						<%= yield %>
+			</session> <!-- span9 -->
+>>>>>>> 3205b05184044db85a8c485d31f513987a279c89
 
 		</div> <!-- row -->
 	</div> <!-- container -->

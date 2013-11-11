@@ -2,6 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+<<<<<<< HEAD
+=======
+
+.status {
+  .session {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .field {
+    width: 100%;
+  }
+
+  #titulo {
+    width: 100%;
+  }
+
+  #conteudo {
+    width: 100%;
+    height: 50px;
+  }
+
+  .actions {
+    text-align: right;
+  }
+
+  .btn {
+    #publicar {
+      margin: 0px;
+    }
+  }
+
+}
+>>>>>>> 3205b05184044db85a8c485d31f513987a279c89
 .status_session {
   margin-left: auto;
   margin-right: auto;
@@ -9,24 +44,6 @@
 .status_session {
     width: 100%;
 }
-
-.status #titulo {
-  width: 100%;
-}
-
-.status #conteudo {
-  width: 100%;
-  height: 50px;
-}
-
-.actions {
-  text-align: right;
-}
-
-#btn_publicar {
-  margin: 0px;
-}
-
 
 // Posts
 

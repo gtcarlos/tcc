@@ -1,5 +1,18 @@
+<<<<<<< HEAD
 <div class="widget-content">
   <%= render :template => "posts/new" %>
   <%= render "posts/posts" %>
   <%= paginate @posts %>
+=======
+<div class="widget status">
+  <div class="widget-content">
+    <%= render :template => "posts/new" %>
+  </div>
+  <br />
+  <div class="widget-content posts">
+    <%= render "posts/posts" %>
+  </div>
+    <%= paginate @posts %>
+</div>
+>>>>>>> 3205b05184044db85a8c485d31f513987a279c89
 </div>

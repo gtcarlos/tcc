@@ -1,15 +1,21 @@
+.navbar-inner {
+  height: 50px;
+  padding-top: 10px;
+  margin: 0px 0px 0px 0px;
+
+  .container {
+  vertical-align: text-bottom;
+
+    .logo {
+    }
+
+    .nav {
+      vertical-align: middle;
+    }
+  }
+}
+
 #logo_header {
     width: 121px;
     height: 20px;
-    position: absolute;
-    margin: 0px 0px 0px 10px;
-    top: 15px;
-}
-
-.navbar-inner {
-  height: 50px;
-}
-
-.login_form {
-  margin: 0px 10px 0px 0px;
 }
