@@ -1,19 +1,11 @@
 <header>
-  <div class="navbar-inverse navbar-fixed-top">
+  <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-<<<<<<< HEAD
 		<div class="container">
       <div class="brand"> <%= link_to(image_tag("header/logo.png", alt: "StartMe", id: "logo_header"), root_url) %></div>
       <div class="nav-collapse">
 			<ul nav class="nav pull-right">
 			<% if user_signed_in? %>
-=======
-      <div class="container">
-      <div class="logo pull-left"><%= link_to(image_tag("header/logo.png", alt: "StartMe", id: "logo_header"), root_url) %></div>
-
-      <div class="nav-collapse">
-      <% if user_signed_in? %>
->>>>>>> 3205b05184044db85a8c485d31f513987a279c89
         <%= render "layouts/menu" %>
       <% else %>
         <div class="navbar-form" id="login">
@@ -25,12 +17,8 @@
           </div> <!-- navbar-form -->
           <% end %>
         <% end %>
-<<<<<<< HEAD
 				</ul> <!-- nav pull-right -->
 				</div> <!-- nav-collapse -->
-=======
-      </div> <!-- nav-collapse -->
->>>>>>> 3205b05184044db85a8c485d31f513987a279c89
       </div> <!-- container -->
     </div> <!-- navbar-inner -->
   </div> <!-- navbar -->
