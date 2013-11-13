@@ -1,7 +1,7 @@
 	<div class="account-container">
 		<div class="account-avatar"><%= image_tag("default_avatar.png", class: "thumbnail") %></div>
 		<div class="account-details">
-			<span><%= link_to @user.name, user_path(current_user), :class => "account-name" %></span>
+			<span><%= link_to current_user.name, user_path(current_user), :class => "account-name" %></span>
 			<span class="account-actions">
 				<%= link_to 'Editar Perfil', edit_user_path(current_user) %>
 			</span>
