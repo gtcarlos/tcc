@@ -11,7 +11,7 @@ Funcionalidade: Acessando o sistema
     Quando eu preencho o campo E-mail corretamente
     E eu preencho o campo Senha corretamente
     E eu clico em Entrar
-    Então eu devo ver a página inicial
+    Então eu devo ver o mural
 
   Cenário: E-mail incorreto e senha correta
     Dado que eu seja um usuário não logado
@@ -46,3 +46,5 @@ Funcionalidade: Acessando o sistema
     Quando eu preencho o campo E-mail com valor não válido
     E eu clico em Entrar
     Então eu devo ver uma mensagem de erro
+    E eu esteja na página inicial
+    #Então eu devo ver a página de acesso
