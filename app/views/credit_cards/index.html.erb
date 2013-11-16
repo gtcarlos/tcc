@@ -1,26 +1,26 @@
-<h1>Listing credit_cards</h1>
+<h1>Seus Cartões de Crédito</h1>
 
-<table>
+Para que suas transações financeiras sejam realizadas, cadastre seu cartão de credito.<br><br>
+
+Bandeiras:<br>
+1 - Amercan Express<br>
+2 - Visa<br>
+3 - Dinners<br>
+4 - MasterCard<br>
+<br>
+Lista de Cartões Cadastrados:
+
+
+<table class="table">
   <tr>
-    <th>Flag</th>
-    <th>Name</th>
-    <th>Number</th>
-    <th>Date</th>
-    <th>Seg cod</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Bandeira</th>
+    <th>Número do Cartão</th>
   </tr>
 
 <% @credit_cards.each do |credit_card| %>
   <tr>
     <td><%= credit_card.flag %></td>
-    <td><%= credit_card.name %></td>
     <td><%= credit_card.number %></td>
-    <td><%= credit_card.date %></td>
-    <td><%= credit_card.seg_cod %></td>
-    <td><%= link_to 'Show', credit_card %></td>
-    <td><%= link_to 'Edit', edit_credit_card_path(credit_card) %></td>
     <td><%= link_to 'Destroy', credit_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
@@ -28,4 +28,5 @@
 
 <br />
 
-<%= link_to 'New Credit card', new_credit_card_path %>
+<%= link_to 'Cadastrar Cartão de Crédito', new_credit_card_path %>
+

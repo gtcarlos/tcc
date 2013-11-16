@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :flag %><br />
-    <%= f.text_field :flag %>
+    <%= f.label "Bandeira do Cartão" %><br />
+    <%= f.select :flag,   [['American Express', '1'],['VISA', '2'],['Dinners', '3'],['MasterCard', '4']] %>
+  </div><br>
+  <div class="field">
+    <%= f.label "Nome no Cartão" %><br />
+    <%= f.text_field :name, :class => "span3"%>
   </div>
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label "Numero do Cartão" %><br />
+    <%= f.text_field :number, :class => "span3"%>
   </div>
   <div class="field">
-    <%= f.label :number %><br />
-    <%= f.text_field :number %>
+    <%= f.label "Data de Validade" %><br />
+    <%= f.text_field :date %>
   </div>
   <div class="field">
-    <%= f.label :date %><br />
-    <%= f.datetime_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :seg_cod %><br />
-    <%= f.number_field :seg_cod %>
+    <%= f.label "Codigo de Segurança" %><br />
+    <%= f.text_field :seg_cod, :class => "span1"%>
   </div>
   <div class="actions">
     <%= f.submit %>
