@@ -16,3 +16,14 @@ Funcionalidade: Visualizar a página inicial
     Quando eu acesso a página inicial
     E clico no botão Cadastre-se
     Então eu devo ver a página de cadastro
+
+	Cenário: Cadastrar um usuário
+		Dados que eu seja um usuário não logado
+		Quando eu acesso a página inicial
+		E clico no botão Cadastre-se
+		E preencho o campo Nome com "Teste"
+		E preencho o campo Email com "teste@teste.com.br"
+		E preencho o campo Senha com "teste1234"
+		E preencho o campo Confirmação da Senha com "teste1234"
+		E clico no botão Cadastrar
+		Então eu devo ver o mural

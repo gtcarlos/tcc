@@ -6,20 +6,20 @@
     <%= devise_error_messages! %>
 
     <div><%= f.label "Nome" %>
-    <%= f.text_field :name, :autofocus => true %></div>
+    <%= f.text_field :name, :id => "cadastro_nome", :autofocus => true %></div>
 
-    <div><%= f.label "Email *" %>
-    <%= f.email_field :email %></div>
+    <div><%= f.label "Email" %>
+    <%= f.email_field :email, :id => "cadastro_email" %></div>
 
-    <div><%= f.label "Senha *" %>
-    <%= f.password_field :password %></div>
+    <div><%= f.label "Senha" %>
+    <%= f.password_field :password, :id => "cadastro_senha" %></div>
 
-    <div><%= f.label "Confirmação da senha *" %>
-    <%= f.password_field :password_confirmation %></div>
+    <div><%= f.label "Confirmação da Senha" %>
+    <%= f.password_field :password_confirmation, :id => "cadastro_confirma" %></div>
 
     <div>Campos marcados com * são obrigatórios</div><br />
 
-    <div><%= f.submit "Cadastrar" %></div>
+    <div><%= f.submit "Cadastrar", :id => "cadastrar" %></div>
   <% end %>
 
   <%= render "devise/shared/links" %>

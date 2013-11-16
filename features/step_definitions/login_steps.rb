@@ -9,11 +9,11 @@ Dado(/^eu esteja na página inicial$/) do
 end
 
 Quando(/^eu preencho o campo E\-mail corretamente$/) do
-  fill_in 'email', :with => "teste@teste.com.br"
+  fill_in "email", :with => "teste@teste.com.br"
 end
 
 Quando(/^eu preencho o campo Senha corretamente$/) do
-  fill_in 'user_password', :with => "teste1234"
+  fill_in "password", :with => "teste1234"
 end
 
 Quando(/^eu clico em Entrar$/) do
@@ -26,7 +26,7 @@ end
 
 
 Quando(/^eu preencho o campo E\-mail incorretamente$/) do
-  fill_in 'user_email', :with => "teste@teste2.com.br"
+  fill_in("user_email", "teste@teste2.com.br")
 end
 
 Então(/^eu devo ver a página de acesso$/) do

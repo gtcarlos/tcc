@@ -12,7 +12,7 @@
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div class="login_form">
             <%= f.email_field :email, :id => "email", :autofocus => true, :placeholder => "E-mail" %>
-            <%= f.password_field :password, :placeholder => "Senha"%>
+            <%= f.password_field :password, :id => "password", :placeholder => "Senha"%>
             <%= f.submit "Entrar", :id => "login", :class => "btn" %>
           </div> <!-- navbar-form -->
         <% end %>
