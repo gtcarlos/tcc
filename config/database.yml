@@ -1,6 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: TCC_development
   pool: 5
   username: postgres
@@ -9,6 +10,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: TCC_test
   pool: 5
   username: postgres
@@ -17,6 +19,7 @@ test: &test
 production:
   adapter: postgresql
   encoding: unicode
+  host: localhost
   database: TCC_production
   pool: 5
   username: postgres
