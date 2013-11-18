@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
   belongs_to :user
 
   # Functionalities
-  has_many :functionalities, :through => :group
+  has_many :functionalities, :through => :groups
 	
 	# Messages
 	has_many :messages

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131023211419) do
+ActiveRecord::Schema.define(:version => 20131118230506) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -96,6 +96,11 @@ ActiveRecord::Schema.define(:version => 20131023211419) do
     t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "functionalities_group", :force => true do |t|
+    t.integer "group_id"
+    t.integer "functionality_id"
   end
 
   create_table "groups", :force => true do |t|
@@ -230,6 +235,7 @@ ActiveRecord::Schema.define(:version => 20131023211419) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.integer  "roles_mask"
+    t.integer  "group_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
