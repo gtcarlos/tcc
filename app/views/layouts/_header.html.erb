@@ -4,9 +4,10 @@
 		<div class="container">
       <div class="brand"> <%= link_to(image_tag("header/logo.png", alt: "StartMe", id: "logo_header"), root_url) %></div>
       <div class="nav-collapse">
+			<%= render "layouts/menu" %>
 			<ul nav class="nav pull-right">
 			<% if user_signed_in? %>
-        <%= render "layouts/menu" %>
+        <%= render "layouts/usermenu" %>
       <% else %>
         <div class="navbar-form" id="login">
           <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
