@@ -6,16 +6,16 @@
     <%= devise_error_messages! %>
 
     <div><%= f.label "Nome" %>
-    <%= f.text_field :name, :id => "cadastro_nome", :autofocus => true %></div>
+    <%= f.text_field :name, :id => "nome", :autofocus => true %></div>
 
     <div><%= f.label "Email" %>
-    <%= f.email_field :email, :id => "cadastro_email" %></div>
+    <%= f.email_field :email, :id => "email" %></div>
 
     <div><%= f.label "Senha" %>
-    <%= f.password_field :password, :id => "cadastro_senha" %></div>
+    <%= f.password_field :password, :id => "senha" %></div>
 
     <div><%= f.label "Confirmação da Senha" %>
-    <%= f.password_field :password_confirmation, :id => "cadastro_confirma" %></div>
+    <%= f.password_field :password_confirmation, :id => "confirmacao" %></div>
 
     <div>Campos marcados com * são obrigatórios</div><br />
 

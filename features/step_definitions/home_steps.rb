@@ -4,6 +4,10 @@ Quando(/^eu acesso a página inicial$/) do
   visit root_path
 end
 
+Dado(/^que eu esteja na página inicial$/) do
+  visit root_path
+end
+
 Então(/^ver a barra de menu$/) do
   page.should have_css("div.navbar")
 end
@@ -20,22 +24,22 @@ Então(/^eu devo ver a página de cadastro$/) do
   page.current_path.should == new_user_registration_path
 end
 
-Quando(/^preencho o campo Nome com "(.*?)"$/) do |nome|
-  fill_in 'cadastro_nome', :with => nome
+Quando(/^preencho o campo Nome com "(.*?)"$/) do |name|
+  fill_in 'name', :with => name
 end
 
-Quando(/^preencho o campo Email com "(.*?)"$/) do |email|
-  fill_in 'cadastro_email', :with => email
+Quando(/^preencho o campo E-mail com "(.*?)"$/) do |email|
+  fill_in 'email', :with => email, exact: true
 end
 
-Quando(/^preencho o campo Senha com "(.*?)"$/) do |senha|
-  fill_in 'cadastro_senha', :with => senha
+Quando(/^preencho o campo Senha com "(.*?)"$/) do |password|
+  fill_in 'password', :with => password, exact: true
 end
 
-Quando(/^preencho o campo Confirmação da Senha com "(.*?)"$/) do |confirmacao|
-  fill_in 'cadastro_confirma', :with => confirmacao
+Quando(/^preencho o campo Confirmação da Senha com "(.*?)"$/) do |confirmation|
+  fill_in 'confirmation', :with => confirmation
 end
 
 Quando(/^clico no botão Cadastrar$/) do
-	click_button('cadastrar')
+	click_button('register')
 end
