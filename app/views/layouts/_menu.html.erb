@@ -1,5 +1,5 @@
 <ul class="nav navbar-nav">
-	<% @usuario.functionalities.each do |f| %>
+	<% current_user.functionalities.each do |f| %>
 		<li>
 			<%= link_to f.name, f.url %>
 		<li>

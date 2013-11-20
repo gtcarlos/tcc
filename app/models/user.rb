@@ -29,16 +29,16 @@ class User < ActiveRecord::Base
   has_many :badges
 
   # Groups
-  belongs_to :user
+  belongs_to :group
 
   # Functionalities
-  has_many :functionalities, :through => :groups
+  has_many :functionalities, :through => :group
 	
 	# Messages
 	has_many :messages
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask, :group_id
 
   roles_attribute :roles_mask
 
