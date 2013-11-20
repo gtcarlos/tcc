@@ -1,4 +1,4 @@
-ActiveAdmin.register Group do
+ActiveAdmin.register Group, :as => "Grupo" do
 
   menu :parent => "Administrador"
 
@@ -23,7 +23,7 @@ ActiveAdmin.register Group do
 			 resource.name
 			end
 			row "Funcionalidades" do
-				group.functionalities.map(&:name).join("<br />").html_safe
+				grupo.functionalities.map(&:name).join("<br />").html_safe
 			end
 		end
   end

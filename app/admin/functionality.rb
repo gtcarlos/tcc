@@ -1,13 +1,15 @@
-ActiveAdmin.register Functionality do
+ActiveAdmin.register Functionality, :as => "Funcionalidade" do
 
 	menu :parent => "Administrador"
-	
+
+	config.sort_order = "created_at desc"
+
 	# Index
 	index do
 		column "ID", :id
 		column "Nome", :name
 		column "URL", :url
-		column "Criado Em", :created_at
+		column "Criado em", :created_at
 		actions
 	end
 
@@ -31,7 +33,7 @@ ActiveAdmin.register Functionality do
 				resource.url
 			end
 			row "Grupos" do
-				functionality.groups.map(&:name).join("<br />").html_safe
+				funcionalidade.groups.map(&:name).join("<br />").html_safe
 			end
 		end
 	end
