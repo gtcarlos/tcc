@@ -4,17 +4,31 @@ ActiveAdmin.register Group do
 
   index do
     column "Nome", :name
-    # column "Funcionalidades", : functionalities do |functionality|
-      
-    # end
+		actions
   end
 
+	# Edit
+	form do |f|
+		f.inputs do
+			f.input :name, :label => "Nome"
+			f.input :functionalities, :multiple => true, :label => "Funcionalidades"
+		end
+		f.actions
+	end
+
+	# Show
   show do
+		attributes_table do
+			row "Nome" do
+			 resource.name
+			end
+			row "Funcionalidades" do
+				group.functionalities.map(&:name).join("<br />").html_safe
+			end
+		end
   end
-
-  #for do |f|
-  #end
 
   filter :name, :label => "Nome"
+	filter :functionalities, :label => "Funcionalidades"
 
 end
