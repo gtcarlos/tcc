@@ -1,0 +1,7 @@
+<ul class="nav navbar-nav">
+	<% current_user.functionalities.each do |f| %>
+		<li>
+			<%= link_to f.name, f.url %>
+		<li>
+	<% end %>
+</ul>
