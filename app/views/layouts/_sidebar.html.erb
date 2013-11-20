@@ -11,48 +11,13 @@
 	<hr />
 
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">
+	<% current_user.functionalities.each do |f| %>
 		<li>
-			<%= link_to user_path(current_user) do %>
-				<i class="icon-user"></i> Perfil
+			<%= link_to f.url do %>
+				<i class="icon-<%= f.icon %>"></i> <%= f.name %>
 			<% end %>
 		</li>
-		<li>
-			<%= link_to posts_path do %>
-				<i class="icon-align-justify"></i> Mural
-			<% end %>
-		</li>
-		<li>
-			<%= link_to messages_path do %>
-				<i class="icon-envelope"></i> Mensagens
-			<% end %>
-		</li>
-
-		<li>
-			<%= link_to friendship_index_path do %>
-				<i class="icon-road"></i> Seguindo
-			<% end %>
-		</li>
-		<li>
-			<%= link_to rankings_path do %>
-				<i class="icon-star"></i> Ranking
-			<% end %>
-		</li>
-		<li>
-			<%= link_to feeds_path do %>
-				<i class="icon-th-list"></i> Feeds
-			<% end %>
-		</li>
-		<li>
-			<%= link_to events_path do %>
-				<i class="icon-calendar"></i> Eventos
-			<% end %>
-		</li>
-		<li>
-			<%= link_to user_path(current_user) do %>
-				<i class="icon-wrench"></i> Configurações
-			<% end %>
-		</li>
+		<% end %>
 	</ul>
-
 	<hr />
 	<br />

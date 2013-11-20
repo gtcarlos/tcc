@@ -9,6 +9,7 @@ ActiveAdmin.register Functionality, :as => "Funcionalidade" do
 		column "ID", :id
 		column "Nome", :name
 		column "URL", :url
+		column "Icone", :icon
 		column "Criado em", :created_at
 		actions
 	end
@@ -18,6 +19,7 @@ ActiveAdmin.register Functionality, :as => "Funcionalidade" do
 		f.inputs do
 			f.input :name, :label => "Nome"
 			f.input :url, :label => "URL"
+			f.input :icon, :label => "Icone"
 			f.input :groups, :multiple => true, :label => "Grupos"
 		end
 		f.actions
@@ -31,6 +33,9 @@ ActiveAdmin.register Functionality, :as => "Funcionalidade" do
 			end
 			row "URL" do
 				resource.url
+			end
+			row "Icone" do
+				resource.icon
 			end
 			row "Grupos" do
 				funcionalidade.groups.map(&:name).join("<br />").html_safe
