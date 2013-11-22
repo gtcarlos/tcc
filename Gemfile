@@ -6,6 +6,9 @@ gem 'rails', '3.2.15'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'activeadmin', github: "gregbell/active_admin"
 
+# Server gem
+gem "thin", "~> 1.6.1"
+
 # Image gem
 gem 'paperclip'
 gem "cocaine" 
