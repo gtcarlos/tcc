@@ -1,0 +1,31 @@
+<h1>Compra de Planos de Perfis</h1>
+
+Seja bem vindo(a) <%= current_user.name %> a pagina de compras dos planos StartMe!<br>
+<br>
+Se você procura um perfil Investidor para investir em empresas do seu interesse, ou você procura um espaço para divulgar seu mostruário de idéias, o StartMe poderá ajudar-lhe oferendo as vantagens dos nossos planos.<br>
+<br>
+Clique em "Fazer Upgrade" para continuar.<br>
+É rapido e facil.<br>
+
+<br>
+<br>
+
+Meus Planos:
+<table class="table">
+  <tr>
+    <th>Plano de Compra</th>
+    <th>Cartão Utilizado</th>
+    </tr>
+
+<% @upgrades.each do |upgrade| %>
+  <tr>
+    <td><%= upgrade.account_plan %></td>
+    <td><%= upgrade.credit_card %></td>
+    <td><%= link_to 'Apagar', upgrade, method: :delete, data: { confirm: 'Tem certeza disso?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Fazer Upgrade', new_upgrade_path %>

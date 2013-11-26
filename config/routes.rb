@@ -27,6 +27,9 @@ TCC::Application.routes.draw do
   resources :investors
 
 
+  resources :upgrades
+
+
   resources :rankings
 
 
