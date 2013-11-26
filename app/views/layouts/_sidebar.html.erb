@@ -7,13 +7,13 @@
 			</span>
 		</div> <!-- /account-details -->
 	</div> <!-- /account-container -->
-	
+
 	<hr />
 
 	<ul id="main-nav" class="nav nav-tabs nav-stacked">
 	<% current_user.functionalities.each do |f| %>
-		<li>
-			<%= link_to f.url do %>
+    <li>
+			<%= link_to eval(f.url) do %>
 				<i class="icon-<%= f.icon %>"></i> <%= f.name %>
 			<% end %>
 		</li>
