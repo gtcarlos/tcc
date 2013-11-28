@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account plan:</b>
+  <%= @upgrade.account_plan %>
+</p>
+
+<p>
+  <b>Credit card:</b>
+  <%= @upgrade.credit_card %>
+</p>
+
+
+<%= link_to 'Edit', edit_upgrade_path(@upgrade) %> |
+<%= link_to 'Back', upgrades_path %>

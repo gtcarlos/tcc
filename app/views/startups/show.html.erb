@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
-  <b>Fantasy name:</b>
+  <b>Nome Fantasia:</b>
   <%= @startup.fantasy_name %>
 </p>
 
 <p>
-  <b>Cnpj duns:</b>
+  <b>CNPJ:</b>
   <%= @startup.cnpj_duns %>
 </p>
 
 <p>
   <b>Logo:</b>
-  <%= @startup.logo %>
+  <%= image_tag @startup.logo.url(:small) %>
 </p>
 
 <p>
@@ -21,23 +23,13 @@
 </p>
 
 <p>
-  <b>Area:</b>
+  <b>Area de Atuação:</b>
   <%= @startup.area %>
 </p>
 
 <p>
-  <b>Location:</b>
+  <b>Endereço:</b>
   <%= @startup.location %>
-</p>
-
-<p>
-  <b>Files:</b>
-  <%= @startup.files %>
-</p>
-
-<p>
-  <b>Message limit:</b>
-  <%= @startup.message_limit %>
 </p>
 
 

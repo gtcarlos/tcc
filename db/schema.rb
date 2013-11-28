@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131126215504) do
+ActiveRecord::Schema.define(:version => 20131127233626) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20131126215504) do
     t.integer  "seg_cod"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "user_id"
   end
 
   create_table "events", :force => true do |t|
@@ -209,9 +210,15 @@ ActiveRecord::Schema.define(:version => 20131126215504) do
     t.string   "location"
     t.binary   "files"
     t.integer  "message_limit"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "image"
+    t.string   "city"
+    t.string   "state"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
   end
 
   create_table "statistics", :force => true do |t|
@@ -221,6 +228,13 @@ ActiveRecord::Schema.define(:version => 20131126215504) do
     t.integer  "post_shared"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "upgrades", :force => true do |t|
+    t.string   "account_plan"
+    t.string   "credit_card"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,5 +1,5 @@
 class CreditCard < ActiveRecord::Base
-  attr_accessible :date, :flag, :name, :number, :seg_cod
+  attr_accessible :date, :flag, :name, :number, :seg_cod, :user_id
   validates_presence_of :date, :flag, :name, :number, :seg_cod, presence => true
   belongs_to :user
   belongs_to :upgrade 

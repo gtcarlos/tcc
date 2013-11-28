@@ -2,11 +2,7 @@
 
 Para que suas transações financeiras sejam realizadas, cadastre seu cartão de credito.<br><br>
 
-Bandeiras:<br>
-1 - Amercan Express<br>
-2 - Visa<br>
-3 - Dinners<br>
-4 - MasterCard<br>
+
 <br>
 Lista de Cartões Cadastrados:
 
@@ -21,7 +17,7 @@ Lista de Cartões Cadastrados:
   <tr>
     <td><%= credit_card.flag %></td>
     <td><%= credit_card.number %></td>
-    <td><%= link_to 'Destroy', credit_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Remover Cartão', credit_card, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
