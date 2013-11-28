@@ -1,11 +1,31 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
   margin: 0px 100px 100px 100px;
 }
 
-h3 {
-  text-align: center;
+.user_info {
 
-}
+	text-align: center;
+
+	.avatar {
+		float: left;
+	} // avatar
+
+	.info {
+		.button_follow {
+			text-align: right;
+		} // button_follow
+	} // info
+
+} // user_info
+
+.posts {
+	clear: both;
+
+	h3 {
+		text-align: center;
+	}
+} // posts

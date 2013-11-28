@@ -1,23 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<div>
-<p>
-  <h2><%= @user.name %></h1>
-<p>
-<% unless current_user.friends.include?(@user)%>
-  <%= form_for :friend, :url => friendship_index_path do |f| %>
-    <%= f.hidden_field :friend_id, value: @user.id %>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <button class="btn btn-info btn-small btn-seguir">Seguir</button>
-  <% end %>
-<% else %>
-  <%= button_to 'Deixar de seguir', friendship_path, method: :delete, :friend_id => @user.id, class: 'btn btn-small btn-danger', confirm: 'Voce tem certeza?' %>
-<% end %>
-</p>
-<div class="posts" id="container">
-  <h3>Postagens</h3>
-  <% @posts = @user.posts %>
-  <%= render "posts/posts" %>
-</div>
-
-
+<div class="widget-content">
+  <p id="notice"><%= notice %></p>
+  
+  <div class="user_info">
+    <div class="avatar">
+      <%= image_tag "default_avatar.png", :class => "thumbnail" %>
+    </div> <!-- avatar -->
+    <div class="info">
+      <h2><%= @user.name %></h2>
+      <br />
+			<span class="button_follow">
+			<% if @user == current_user%>
+        <%= button_to 'Editar Perfil', edit_user_path(current_user), :method => "get", :class => "btn btn-small btn-info" %>
+      <% elsif !current_user.friends.include?(@user) %>
+        <%= form_for :friend, :url => friendship_index_path do |f| %>
+          <%= f.hidden_field :friend_id, value: @user.id %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <button class="btn btn-small btn-primary">Seguir</button>
+        <% end %>
+      <% else %>
+        <%= button_to 'Deixar de seguir', friendship_path, :method =>:delete, :friend_id => @user.id, :class => 'btn btn-small btn-danger', :confirm => 'Voce tem certeza?' %>
+      <% end %>
+			</span>
+    </div> <!-- info -->
+  </div> <!-- user_info -->
+  
+  <div class="posts">
+    <h3>Postagens</h3>
+    <%= render "posts/posts" %>
+  </div> <!-- posts -->
+</div> <!-- widget-content>

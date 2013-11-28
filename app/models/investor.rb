@@ -1,3 +1,3 @@
 class Investor < ActiveRecord::Base
-  attr_accessible :area, :bio, :company, :history, :location, :name
+  attr_accessible :area, :bio, :company, :history, :location, :name, :image
 end

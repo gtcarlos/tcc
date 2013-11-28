@@ -13,6 +13,6 @@ class FriendshipController < ApplicationController
     @friend_id = params[:id]
     @friendship = current_user.friendships.find(:all, :conditions => ["friend_id = ?", @friend_id]).first
     @friendship.destroy
-    redirect_to user_path(@friend_id), alert: 'Usuario removido com sucesso'
+    redirect_to user_path(@friend_id), :alert => "Usuario removido com sucesso"
   end
 end
