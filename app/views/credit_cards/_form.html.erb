@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label "Bandeira do Cartão" %><br />
-    <%= f.select :flag,   [['American Express', 'American Express'],['VISA', 'VISA'],['Dinners', 'Dinners'],['MasterCard', 'MasterCard']] %>
+    <%= f.select :flag,   [['American Express', 'American Express'],['VISA', 'VISA'],['Dinners', 'Dinners'],['MasterCard', 'MasterCard']], { include_blank: true } %>
   </div><br>
   <div class="field">
     <%= f.label "Nome no Cartão" %><br />

@@ -17,7 +17,7 @@ Lista de Cartões Cadastrados:
   <tr>
     <td><%= credit_card.flag %></td>
     <td><%= credit_card.number %></td>
-    <td><%= link_to 'Remover Cartão', credit_card, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+    <td><%= button_to 'Remover Cartão', credit_card, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
