@@ -3,6 +3,7 @@ ActiveAdmin.register Group, :as => "Grupo" do
   menu :parent => "Administrador"
 
   index do
+    column "ID", :id
     column "Nome", :name
 		actions
   end
@@ -19,6 +20,9 @@ ActiveAdmin.register Group, :as => "Grupo" do
 	# Show
   show do
 		attributes_table do
+      row "ID" do
+        resource.id
+      end
 			row "Nome" do
 			 resource.name
 			end

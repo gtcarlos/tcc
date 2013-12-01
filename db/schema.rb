@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131127233626) do
+ActiveRecord::Schema.define(:version => 20131201033622) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -253,6 +253,11 @@ ActiveRecord::Schema.define(:version => 20131127233626) do
     t.string   "last_sign_in_ip"
     t.integer  "roles_mask"
     t.integer  "group_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.integer  "email_policy"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

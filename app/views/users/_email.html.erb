@@ -1,0 +1,26 @@
+<h3> Alterar Política de Email </h3>
+
+<%= form_for(@user) do |f| %>
+  <div>
+    Selecione aqui qual o método de recepção de e-mails desejado:
+  <div>
+  <br />
+  <div id="email_policy">
+    <div>
+      <%= f.radio_button :email_policy, "1", :class => "input-medium" %>
+      <%= f.label :email_policy_1, "- Receber e-mail somente dos administradores do StartMe." %>
+    </div>
+
+    <div>
+      <%= f.radio_button :email_policy, "2", :class => "input-medium" %>
+      <%= f.label :email_policy_2, "-  Receber e-mail dos administradores e das atualizações." %>
+    <div>
+
+    <div>
+      <%= f.radio_button :email_policy, "3", :class => "input-medium"%>
+      <%= f.label :email_policy_3, "-  Receber e-mail dos administradores, das atualizações e dos parceiros." %>
+    </div>
+  </div>
+  <div id="email_submit"><br /><br /><%= f.submit "Atualizar", :class => "btn" %></div>
+
+<% end %>

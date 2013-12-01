@@ -58,6 +58,12 @@ TCC::Application.routes.draw do
   resources :friendship, only: [:create, :destroy]
   root :to => 'home#show'
 
+
+  # Home
   match 'home', to: 'home#show', via: :all
-  match 'home_index', to: 'home#index'
+  match 'index', to: 'home#index', as: 'home_index'
+
+  # Users
+  match '/users/:id/settings', to: 'users#settings', as: 'settings_user'
+
 end

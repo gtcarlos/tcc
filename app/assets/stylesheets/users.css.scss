@@ -29,3 +29,22 @@ body {
 		text-align: center;
 	}
 } // posts
+
+#email_policy {
+  label, input[type="radio"] {
+    float: left;
+  }
+
+  input {
+    clear: left;
+  }
+
+}
+
+#email_submit {
+  clear: both;
+}
+
+table {
+  text-align: center;
+}

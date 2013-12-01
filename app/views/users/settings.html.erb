@@ -1,0 +1,27 @@
+<div class="widget-content">
+  <h1 class="page-title">
+    Configurações
+  </h1>
+  <div class="tabbable">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#1" data-toggle="tab">Configurações da Conta</a><li>
+      <li><a href="#2" data-toggle="tab">Configurações de Email</a><li>
+      <li><a href="#3" data-toggle="tab">Configurações de Pagamento</a><li>
+    </ul> <!-- nav-tabs -->
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="1">
+        <%= render 'users/account' %>
+      </div> <!-- tab-pane 1-->
+
+      <div class="tab-pane active" id="2">
+        <%= render 'users/email' %>
+      </div> <!-- tab-pane 2-->
+
+      <div class="tab-pane active" id="3">
+        <%= render 'users/payments' %>
+      </div> <!-- tab-pane 3-->
+
+  </div> <!-- tabbable -->
+
+</div>

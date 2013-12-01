@@ -1,7 +1,11 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
 
   <div class="field">
     <%= f.label "Nome: " %> <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :photo, "Foto do perfil" %>
+    <%= f.file_field :photo %>
   </div>
   <div class="actions">
     <%= f.submit "Atualizar Usuário", :class => "btn btn-info" %>

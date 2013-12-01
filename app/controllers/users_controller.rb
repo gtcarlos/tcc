@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!, :except => :new
 
   # CanCan authorization
-  load_and_authorize_resource
+  #load_and_authorize_resource
 
   # GET /users
   # GET /users.json
@@ -46,12 +46,12 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
-  def create(roles_mask = 1)
+  def create
     @user = User.new(params[:user])
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: 'Usuario criado.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Informacoes atualizadas.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -86,5 +86,15 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end
+  end
+
+  def settings
+    @user = current_user
+    @cards = current_user.credit_cards.all
+    @credit_card = CreditCard.new
+    respond_to do |format|
+      format.html
+    end
+
   end
 end

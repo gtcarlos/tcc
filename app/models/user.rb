@@ -9,6 +9,9 @@ class User < ActiveRecord::Base
 
   include RoleModel
 
+  # Default attributes
+  attr_default :group_id, 1
+
   # Posts
   has_many :posts
 
@@ -25,6 +28,9 @@ class User < ActiveRecord::Base
   # Payments
   has_many :payments
 
+  # Credit Cards
+  has_many :credit_cards
+
   # Badges
   has_many :badges
 
@@ -33,19 +39,24 @@ class User < ActiveRecord::Base
 
   # Functionalities
   has_many :functionalities, :through => :group
-	
+
 	# Messages
 	has_many :messages
 
+  # Photo
+  has_attached_file :photo, :styles => {:small => "150x150>"},
+    :default_url => "default_avatar.png",
+    :url => "/assets/users/:id/:style/:basename.:extension",
+    :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension"
+
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask, :group_id
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask, :group_id, :photo, :email_policy
 
   roles_attribute :roles_mask
-
-  roles :admin, :default
 
   def timeline
     Post.includes(:user).where(user_id: Friendship.where(user_id: self.id).pluck(:friend_id) << self.id).order("created_at desc")
   end
+
 
 end

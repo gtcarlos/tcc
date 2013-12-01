@@ -1,9 +1,9 @@
 <div class="widget-content">
   <p id="notice"><%= notice %></p>
-  
+
   <div class="user_info">
     <div class="avatar">
-      <%= image_tag "default_avatar.png", :class => "thumbnail" %>
+      <%= image_tag @user.photo.url(:small) %>
     </div> <!-- avatar -->
     <div class="info">
       <h2><%= @user.name %></h2>
@@ -23,7 +23,7 @@
 			</span>
     </div> <!-- info -->
   </div> <!-- user_info -->
-  
+
   <div class="posts">
     <h3>Postagens</h3>
     <%= render "posts/posts" %>

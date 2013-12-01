@@ -9,9 +9,12 @@ gem 'activeadmin', github: "gregbell/active_admin"
 # Server gem
 gem "thin", "~> 1.6.1"
 
+# Default attributes on Model
+gem 'attribute-defaults'
+
 # Image gem
 gem 'paperclip'
-gem "cocaine" 
+gem "cocaine"
 
 # Front-End Gems
 gem 'jquery-rails'

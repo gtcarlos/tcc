@@ -1,5 +1,6 @@
-	<div class="account-container">
-		<div class="account-avatar"><%= image_tag("default_avatar.png", class: "thumbnail") %></div>
+<div class="account-container">
+
+		<div class="account-avatar"><%= image_tag current_user.photo.url, class: "thumbnail" %></div>
 		<div class="account-details">
 			<span><%= link_to current_user.name, user_path(current_user), :class => "account-name" %></span>
 			<span class="account-actions">
