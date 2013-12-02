@@ -3,25 +3,24 @@
     Configurações
   </h1>
   <div class="tabbable">
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="#1" data-toggle="tab">Configurações da Conta</a><li>
-      <li><a href="#2" data-toggle="tab">Configurações de Email</a><li>
-      <li><a href="#3" data-toggle="tab">Configurações de Pagamento</a><li>
+    <ul class="nav nav-tabs nav-justified" data-tabs="tabs">
+      <li class="active"><a data-toggle="tab" href="#account">Configurações da Conta</a><li>
+      <li><a data-toggle="tab" href="#email">Configurações de Email</a><li>
+      <li><a data-toggle="tab"href="#payments">Configurações de Pagamento</a><li>
     </ul> <!-- nav-tabs -->
 
     <div class="tab-content">
-      <div class="tab-pane active" id="1">
+      <div class="tab-pane active" id="account">
         <%= render 'users/account' %>
-      </div> <!-- tab-pane 1-->
+      </div> <!-- tab-pane account -->
 
-      <div class="tab-pane active" id="2">
+      <div class="tab-pane" id="email">
         <%= render 'users/email' %>
-      </div> <!-- tab-pane 2-->
+      </div> <!-- tab-pane email-->
 
-      <div class="tab-pane active" id="3">
-        <%= render 'users/payments' %>
-      </div> <!-- tab-pane 3-->
+      <div class="tab-pane" id="payments">
+      </div> <!-- tab-pane payments-->
 
+    </div> <!-- tab-content -->
   </div> <!-- tabbable -->
-
-</div>
+</div> <!-- widget-content -->
