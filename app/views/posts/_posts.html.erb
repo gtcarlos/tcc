@@ -1,13 +1,15 @@
 <% @posts.each do |p| %>
-<section class="post" id="update">
+<div class="post" id="update">
   <header class="post" id="usuario">
-    <div id="left" style="float:left"><%= link_to p.user.name, user_path(p.user.id) %></div>
+    <div id="left" style="float:left">
+		<%= image_tag p.user.photo.url, :class => "image_post" %>
+		<%= link_to p.user.name, user_path(p.user.id) %></div>
     <div id="right" style="text-align: right"><%= p.created_at.strftime('%d/%m/%Y - %H:%M:%S:%p') %></div>
   </header>
+	<div class="post_content">
   <h4 id="titulo"><%= p.title %></h4>
   <p class="post" id="conteudo"><%= p.content %></p>
-  <footer>
-    <hr />
-  </footer>
-</section>
+	</div>
+	<hr />
+</div>
 <% end %>
