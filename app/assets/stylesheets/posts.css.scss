@@ -123,16 +123,59 @@
 
 html {overflow-y: scroll;}
 
-.image_post {
+// _post.html.erb
+	
+#avatar {
+	float: left;
+
+	.thumbnail {
 		width: 50px;
 		height: 50px;
-		float: left;
+	}
 }
 
-div .post {
-	clear: right;
-}
 
-.post_content {
-	clear: both;
-}
+#full_post {
+	margin-left: 10px;
+	width: 590px;
+	display: inline-block;
+
+
+  #info {
+		margin-bottom: 10px;
+	  #name {
+		  float: left;
+	  }
+
+	  #date-actions {
+		  float: right;
+
+		  #date, #actions {
+			  float: left;
+			
+			  i {
+				  margin-left: 10px;
+				
+				  :hover {
+					  text-decoration: none;
+				  } // :hover
+			  } // i
+		  } // #date #actions
+	  } // #date-actions
+  } //#info
+
+	#post {
+		clear: both;
+		background-color: white;
+
+		#title {
+			text-align: center;
+		}
+
+		#post_content {
+			vertical-align: top;
+		}
+	} // post
+} // #full_post
+
+
