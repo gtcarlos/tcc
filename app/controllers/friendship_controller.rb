@@ -1,11 +1,12 @@
 class FriendshipController < ApplicationController
   def create
+		@friend_id = params[:id]
     @friendship = current_user.friendships.build(friend_id: params[:friend][:friend_id])
 
     if @friendship.save
-      redirect_to user_path(@user), notice: 'Usuario seguido com sucesso'
+      redirect_to user_path(@friend_id), notice: 'Usuario seguido com sucesso'
     else
-      redirect_to user_path(@user), alert: 'Nao foi possivel seguir'
+      redirect_to user_path(@friend_id), alert: 'Nao foi possivel seguir'
     end
   end
 
