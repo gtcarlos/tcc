@@ -1,0 +1,13 @@
+<h1>Buscar usuário</h1>
+
+<%= form_for :user, current_user.friendships.all.each do |f| %>
+
+<%= f.label :user %>
+<%= f.text_field :user, :placeholder => "Destinatário" %>
+<%#= f.submit "Buscar", :action => "showuser",
+:redirect_to => show_user_path, :class => "btn",
+:id => "Buscar" %>
+<%= f.submit "Buscar",:class => "btn" %>
+<%#= link_to "Buscar", show_user_path(:receiver => params[:receiver]), class: "btn" %>
+
+<% end %>

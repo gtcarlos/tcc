@@ -1,10 +1,21 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Content:</b>
+  <b>Título: </b>
+  <br>
+  <%= @message.title %>
+  <br><br>
+  <b>Conteúdo:</b>
+  <br>
   <%= @message.content %>
 </p>
 
+<% if @message.user_receiver_id == current_user.id.to_s %>
+<%= form_for(@message) do |f| %>
+<%= f.hidden_field :read_flag, :value => "ok" %>
+<%= f.submit "Marcar como lida" %>
+<% end %>
+<% end %>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
+
 <%= link_to 'Back', messages_path %>

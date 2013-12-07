@@ -66,4 +66,8 @@ TCC::Application.routes.draw do
   # Users
   match '/users/:id/settings', to: 'users#settings', as: 'settings_user'
 
+  # Messages
+   match 'select_user', to: 'messages#select'
+  match 'show_user', to: 'messages#showuser'
+
 end
