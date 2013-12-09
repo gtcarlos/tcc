@@ -1,12 +1,12 @@
-<h1>Perfil de Investimento</h1>
+<div class="widget-content">
+<h1 class="page-title">Meus Investidores</h1>
 
-<table>
+<table class="table">
   <tr>
     <th>Nome</th>
     <th>Empresa</th>
+    <th>Localização</th>
     <th>Area de Interesse</th>
-    <th>Historico de Investimento</th>
-    <th>Biografia</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,15 +18,10 @@
     <td><%= investor.company %></td>
     <td><%= investor.location %></td>
     <td><%= investor.area %></td>
-    <td><%= investor.history %></td>
-    <td><%= investor.bio %></td>
-    <td><%= link_to 'Show', investor %></td>
-    <td><%= link_to 'Edit', edit_investor_path(investor) %></td>
-    <td><%= link_to 'Destroy', investor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Exibir', investor %></td>
+    <td><%= link_to 'Editar', edit_investor_path(investor) %></td>
+    <td><%= link_to 'Excluir', investor, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Investor', new_investor_path %>
+</div>

@@ -43,6 +43,9 @@ class User < ActiveRecord::Base
 	# Messages
 	has_many :messages
 
+  # Investor
+  has_one :investor
+
   # Photo
   has_attached_file :photo, :styles => {:thumbnail => "50x50>", :small => "150x150>"},
     :default_url => "default_avatar.png",

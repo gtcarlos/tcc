@@ -1,41 +1,30 @@
-<%= form_for(@investor) do |f| %>
-  <% if @investor.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@investor.errors.count, "error") %> prohibited this investor from being saved:</h2>
-
-      <ul>
-      <% @investor.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_for @investor, :html => { :multipart => true } do |f| %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label "Nome" %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :company %><br />
+    <%= f.label "Empresa" %>
     <%= f.text_field :company %>
   </div>
   <div class="field">
-    <%= f.label :location %><br />
+    <%= f.label "Localização" %>
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :area %><br />
-    <%= f.text_field :area %>
+    <%= f.label "Área de atuação" %>
+     <%= f.select :area, [['Tecnologia', 'Tecnologia'],['Serviços', 'Serviços'],['Automobilistica', 'Automobilistica'],['Alimenticios', 'Alimenticios'],['Cosmeticos', 'Cosmeticos']], { include_blank: true }%>
   </div>
   <div class="field">
-    <%= f.label :history %><br />
-    <%= f.text_field :history %>
-  </div>
-  <div class="field">
-    <%= f.label :bio %><br />
+    <%= f.label "Sobre mim" %>
     <%= f.text_area :bio %>
   </div>
+  <div class="field">
+    <%= f.label "Foto do Perfil" %>
+    <%= f.file_field :photo  %>
+  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "Enviar", :class => "btn"%>
   </div>
 <% end %>
