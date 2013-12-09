@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20131201135924) do
+=======
+ActiveRecord::Schema.define(:version => 20131209004241) do
+>>>>>>> 4bc7df63f92533a78b0de2566a9e9319a2e1e29e
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -143,9 +147,14 @@ ActiveRecord::Schema.define(:version => 20131201135924) do
     t.integer  "area"
     t.string   "history"
     t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.string   "image"
+    t.integer  "user_id"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   create_table "messages", :force => true do |t|
