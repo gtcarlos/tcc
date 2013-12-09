@@ -8,7 +8,7 @@
     <th></th>
   </tr>
 
-<% Message.where("user_receiver_id = ?",current_user.id.to_s).each do |message| %>
+<% Message.where("user_receiver_id = ?",current_user.id).each do |message| %>
   <tr>
 
     <% if message.read_flag == "ok" %>
