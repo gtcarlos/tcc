@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131209214215) do
+ActiveRecord::Schema.define(:version => 20131209222247) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -136,23 +136,6 @@ ActiveRecord::Schema.define(:version => 20131209214215) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "investors", :force => true do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "location"
-    t.integer  "area"
-    t.string   "history"
-    t.text     "bio"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-    t.string   "image"
-    t.integer  "user_id"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-  end
-
   create_table "messages", :force => true do |t|
     t.text     "content"
     t.datetime "created_at", :null => false
@@ -265,6 +248,11 @@ ActiveRecord::Schema.define(:version => 20131209214215) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "email_policy"
+    t.string   "company"
+    t.string   "location"
+    t.string   "area"
+    t.string   "history"
+    t.text     "bio"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

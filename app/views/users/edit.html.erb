@@ -1,7 +1,11 @@
 <div class="widget-content">
-<h1>Editar perfil</h1>
+<h1 class="page-title">Editar perfil</h1>
 
-<%= render 'form' %>
+<% if current_user.group == Group.find(3) %>
+	<%= render 'form_investor' %>
+<% else %>
+	<%= render 'form' %>
+<% end %>
 
 <%= link_to 'Voltar', :back %>
 </div>

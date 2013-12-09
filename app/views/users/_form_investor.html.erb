@@ -1,0 +1,30 @@
+<%= form_for @user, :html => { :multipart => true } do |f| %>
+  <div class="field">
+    <%= f.label "Nome" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label "Empresa" %>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label "Localização" %>
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label "Área de atuação" %>
+     <%= f.select :area, [['Tecnologia', 'Tecnologia'],['Serviços', 'Serviços'],['Automobilistica', 'Automobilistica'],['Alimenticios', 'Alimenticios'],['Cosmeticos', 'Cosmeticos']], { include_blank: true }%>
+  </div>
+  <div class="field">
+    <%= f.label "Sobre mim" %>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="field">
+    <%= f.label "Foto do Perfil" %>
+    <%= f.file_field :photo  %>
+  </div>
+  <div class="actions">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "Enviar", :class => "btn"%>
+  </div>
+<% end %>
