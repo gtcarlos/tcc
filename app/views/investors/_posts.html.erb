@@ -1,0 +1,33 @@
+<% @posts.each do |p| %>
+<section class="post">
+
+	<div id="avatar">
+		<%= image_tag p.user.photo.url, :class => "thumbnail"%>
+	</div>
+
+	<article id="full_post">
+		<header id="info">
+			<div id="name"><%= link_to p.user.investor.name, investor_path(p.user.investor.id) %></div>
+			<div id="date-actions">
+				<div id="date"><%= p.created_at.strftime('%d/%m/%Y %H:%M') %></div>
+				<div id="actions">
+					<% if p.user.investor == current_user.investor %>
+						<%= link_to post_path(p.id), :method => :delete, :data => { :confirm => "Você tem certeza que quer remover essa postagem?"} do %>
+							<i class="icon-remove"></i>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</header>
+
+		<section id="post">
+			<header><hr /><header>
+			<div id="title"><h4><%= p.title %></h4></div>
+			<div id="post_content"><%= p.content %></div>
+		</section>
+	</article>
+
+	<footer><br /><br /></footer>
+
+</section>
+<% end %>

@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20131201135924) do
-=======
-ActiveRecord::Schema.define(:version => 20131209004241) do
->>>>>>> 4bc7df63f92533a78b0de2566a9e9319a2e1e29e
+ActiveRecord::Schema.define(:version => 20131209214215) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -175,9 +171,10 @@ ActiveRecord::Schema.define(:version => 20131209004241) do
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
+    t.integer  "investor_id"
   end
 
   create_table "products", :force => true do |t|

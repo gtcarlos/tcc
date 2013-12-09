@@ -7,3 +7,49 @@ textarea {
   width: 80%;
 }
 
+body {
+  margin: 0px 100px 100px 100px;
+}
+
+.investor_info {
+
+	text-align: center;
+
+	.avatar {
+		float: left;
+	} // avatar
+
+	.info {
+		.button_follow {
+			text-align: right;
+		} // button_follow
+	} // info
+
+} // user_info
+
+.posts {
+	clear: both;
+
+	h3 {
+		text-align: center;
+	}
+} // posts
+
+#email_policy {
+  label, input[type="radio"] {
+    float: left;
+  }
+
+  input {
+    clear: left;
+  }
+
+}
+
+#email_submit {
+  clear: both;
+}
+
+table {
+  text-align: center;
+}

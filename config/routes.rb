@@ -16,7 +16,7 @@ TCC::Application.routes.draw do
 
   resources :messages
 
-  resources :investors, :only => [:show, :create, :edit, :destroy]
+  resources :investors#, :only => [:show, :create, :edit, :destroy]
 
   resources :upgrades
 
@@ -54,4 +54,5 @@ TCC::Application.routes.draw do
    match 'select_user', to: 'messages#select'
   match 'show_user', to: 'messages#showuser'
 
+	# Investors
 end
