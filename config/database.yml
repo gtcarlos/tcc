@@ -5,7 +5,7 @@ development:
   database: TCC_development1
   pool: 5
   username: postgres
-  password: vhorghan
+  password: postgres
 
 test: &test
   adapter: postgresql
@@ -14,7 +14,7 @@ test: &test
   database: TCC_test
   pool: 5
   username: postgres
-  password: vhorghan
+  password: postgres
 
 production:
   adapter: postgresql
@@ -23,7 +23,7 @@ production:
   database: TCC_production
   pool: 5
   username: postgres
-  password: vhorghan
+  password: postgres
 
 cucumber:
   <<: *test
