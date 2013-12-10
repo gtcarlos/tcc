@@ -15,9 +15,10 @@
     <%= f.label "Plano de Assinatura (valor mensalidade)" %><br />
     <%= f.select :account_plan, [['Startup - 3 meses (R$ 40,00)', 'Startup - 3 meses (R$ 40,00)'],['Startup - 6 meses (R$ 30,00)', 'Startup - 6 meses (R$ 30,00)'],['Startup - 9 meses (R$ 25,00)', 'Startup - 9 meses (R$ 25,00)'],['Startup - 1 ano (R$ 20,00)', 'Startup - 1 ano (R$ 20,00)'],['Startup Premium - 3 meses (R$ 70,00)', 'Startup Premium - 3 meses (R$ 70,00)'],['Startup Premium - 6 meses (R$ 60,00)', 'Startup Premium - 6 meses (R$ 60,00)'],['Startup Premium - 9 meses (R$ 55,00)', 'Startup Premium - 9 meses (R$ 55,00)'],['Startup Premium - 1 ano (R$ 50,00)', 'Startup Premium - 1 ano (R$ 50,00)'],['Investidor - 3 meses (R$ 40,00)', 'Investidor - 3 meses (R$ 40,00)'],['Investidor - 6 meses (R$ 30,00)', 'Investidor - 6 meses (R$ 30,00)'],['Investidor - 9 meses (R$ 25,00)', 'Investidor - 9 meses (R$ 25,00)'],['Investidor - 1 ano (R$ 20,00)', 'Investidor - 1 ano (R$ 20,00)'],['Investidor Premium - 3 meses (R$ 70,00)', 'Investidor Premium - 3 meses (R$ 70,00)'],['Investidor Premium - 6 meses (R$ 60,00)', 'Investidor Premium - 6 meses (R$ 60,00)'],['Investidor Premium - 9 meses (R$ 50,00)', 'Investidor Premium - 9 meses (R$ 50,00)'],['Investidor Premium - 1 ano (R$ 70,00)', 'Investidor Premium - 1 ano (R$ 70,00)']], { include_blank: true } %>
   </div><br>
+  <%= f.hidden_field :user_id, :value => current_user.id %>
   <div class="field">
     <%= f.label "Escolha seu Cartão de Crédito" %><br />
-    <%= f.select :credit_card, CreditCard.all.collect {|card| [ card.number ] }, { include_blank: true } %>
+    <%= f.select :credit_card, current_user.credit_cards.all.collect {|card| [ card.number ] }, { include_blank: true } %>
   </div>
 
   *Para prosseguir com a compra, você precisa ter um cartão de crédito cadastrado. <br>
