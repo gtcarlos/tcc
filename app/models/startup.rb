@@ -4,6 +4,7 @@ class Startup < ActiveRecord::Base
 
   belongs_to :user
   has_many :posts
+  has_many :products
 
   has_attached_file :logo, :styles => {:small => "100x100>" },
     :url => "/assets/startups/:id/:style/:basename.:extension",
