@@ -167,7 +167,7 @@ html {overflow-y: scroll;}
 	#post {
 		clear: both;
 		background-color: white;
-
+		
 		#title {
 			text-align: center;
 		}
@@ -178,4 +178,6 @@ html {overflow-y: scroll;}
 	} // post
 } // #full_post
 
-
+#null {
+	text-align: center;
+}

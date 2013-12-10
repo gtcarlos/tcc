@@ -20,3 +20,13 @@
 			</span>
     </div> <!-- info -->
   </div> <!-- user_info -->
+	<div class="investor_info">
+		<br /><hr />
+		<dl  class="dl-horizontal">
+		<dt>Empresa:</dt> <dd><%= @user.company %></dd>
+		<dt>Localização:</dt> <dd><%= @user.location %></dd>
+		<dt>Área de Interesse:</dt> <dd><%= @user.area %></dd>
+		</dl>
+		<br /><div id="bio"><%= @user.bio%></div>
+		<hr/>
+	</div>
