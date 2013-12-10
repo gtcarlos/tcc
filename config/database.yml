@@ -2,7 +2,7 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: TCC_development1
+  database: TCC_development2
   pool: 5
   username: postgres
   password: postgres

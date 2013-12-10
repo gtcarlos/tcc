@@ -136,28 +136,6 @@ ActiveRecord::Schema.define(:version => 20131210155540) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "investors", :force => true do |t|
-    t.string   "name"
-    t.string   "company"
-    t.string   "location"
-    t.integer  "area"
-    t.string   "history"
-    t.text     "bio"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "image"
-  end
-
-  create_table "messages", :force => true do |t|
-    t.text     "content"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-    t.integer  "user_receiver_id"
-    t.integer  "user_id"
-    t.string   "title"
-    t.string   "read_flag"
-  end
-
   create_table "payments", :force => true do |t|
     t.integer  "type"
     t.integer  "transaction"
@@ -173,7 +151,6 @@ ActiveRecord::Schema.define(:version => 20131210155540) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "user_id"
-    t.integer  "startup_id"
     t.integer  "investor_id"
   end
 
