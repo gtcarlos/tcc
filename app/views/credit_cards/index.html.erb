@@ -13,7 +13,7 @@ Lista de Cartões Cadastrados:
     <th>Número do Cartão</th>
   </tr>
 
-<% current_user.credit_cards.each do |credit_card| %>
+<% CreditCard.where("user_id = ?",current_user.id).each do |credit_card| %>
   <tr>
     <td><%= credit_card.flag %></td>
     <td><%= credit_card.number %></td>
