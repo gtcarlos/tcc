@@ -1,4 +1,5 @@
-<div class="widget-content">
+<p id="notice"><%= notice %></p>
+<div class="widget-content" id="entrar">
 <h1 class="page-title">Entrar</h1>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
@@ -9,7 +10,7 @@
   <%= f.password_field :password %></div>
 
   <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box "Lembrar-se de mim" %> <%= f.label :remember_me %></div>
+    <div><%= f.check_box :remember_me %> <%= f.label "Lembrar-se de mim" %></div>
   <% end -%>
 
   <div><%= f.submit "Entrar", :class => "btn" %></div>
