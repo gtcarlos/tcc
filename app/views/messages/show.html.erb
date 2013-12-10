@@ -1,3 +1,4 @@
+<div class="widget-content">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -13,9 +14,7 @@
 <% if @message.user_receiver_id == current_user.id%>
 <%= form_for(@message) do |f| %>
 <%= f.hidden_field :read_flag, :value => "ok" %>
-<%= f.submit "Marcar como lida" %>
+<%= f.submit "Marcar como lida", :class => "btn" %>
 <% end %>
 <% end %>
-
-
-<%= link_to 'Back', messages_path %>
+</div>
