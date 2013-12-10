@@ -1,17 +1,14 @@
-<div class="widget-content">
-  <p id="notice"><%= notice %></p>
-
-  <div class="investor_info">
+  <div class="user_info">
     <div class="avatar">
-      <%= image_tag @investor.photo.url(:small), :class => "thumbnail" %>
+      <%= image_tag @user.photo.url(:small), :class => "thumbnail" %>
     </div> <!-- avatar -->
     <div class="info">
-      <h2><%= @investor.name %></h2>
+      <h2><%= @user.name %></h2>
       <br />
 			<span class="button_follow">
-			<% if @investor == current_user.investor%>
-        <%= button_to 'Editar Perfil', edit_investor_path(current_user.investor), :method => "get", :class => "btn btn-small btn-info" %>
-      <% elsif !current_user.friends.include?(@uinvestor) %>
+			<% if @user == current_user%>
+        <%= button_to 'Editar Perfil', edit_user_path(current_user), :method => "get", :class => "btn btn-small btn-info" %>
+      <% elsif !current_user.friends.include?(@user) %>
         <%= form_for :friend, :url => friendship_index_path do |f| %>
           <%= f.hidden_field :friend_id, value: @user.id %>
           <%= f.hidden_field :user_id, value: current_user.id %>
@@ -23,9 +20,3 @@
 			</span>
     </div> <!-- info -->
   </div> <!-- user_info -->
-
-  <div class="posts">
-    <h3>Postagens</h3>
-    <%= render "investors/posts" %>
-  </div> <!-- posts -->
-</div> <!-- widget-content>

@@ -2,51 +2,35 @@ TCC::Application.routes.draw do
 
   resources :events
 
-
   resources :investor_groups
-
 
   resources :interests
 
-
   resources :statistics
-
 
   resources :products
 
-
   resources :showcases
-
 
   resources :startups
 
-
   resources :messages
 
-
-  resources :investors
-
+  resources :investors#, :only => [:show, :create, :edit, :destroy]
 
   resources :upgrades
 
-
   resources :rankings
-
 
   resources :badges
 
-
   resources :credit_cards
-
 
   resources :payments
 
-
   resources :feeds
 
-
   resources :reports
-
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -70,4 +54,5 @@ TCC::Application.routes.draw do
    match 'select_user', to: 'messages#select'
   match 'show_user', to: 'messages#showuser'
 
+	# Investors
 end
