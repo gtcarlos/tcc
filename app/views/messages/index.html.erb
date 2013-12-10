@@ -1,6 +1,7 @@
-<h1>Caixa de Entrada</h1>
+<div class="widget-content">
+<h1 class="post-title">Caixa de Entrada</h1>
 
-<table class="table">
+<table class="table table-striped">
   <tr>
     <th>De:</th>
     <th>Titulo</th>
@@ -19,7 +20,7 @@
     <td><b><%= message.title %></b></td>
     <% end %>
     <td><%= button_to 'Abrir', message, :method => :get %></td>
-    <td><%= button_to 'Excluir', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= button_to 'Excluir', message, method: :delete, data: { confirm: 'Voce tem certeza?' } %></td>
   </tr>
 <% end %>
 </table>
@@ -27,4 +28,5 @@
 <br />
 
 <%#= link_to 'New Message', select_user_path %>
-<%= link_to 'New Message', new_message_path %>
+<%= link_to 'Nova Mensagem', new_message_path %>
+</div>
