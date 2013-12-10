@@ -1,4 +1,5 @@
-<h1>Compra de Planos de Perfis</h1>
+<div class="widget-content">
+<h1 class="page-title">Compra de Planos de Perfis</h1>
 
 Seja bem vindo(a) <%= current_user.name %> a pagina de compras dos planos StartMe!<br>
 <br>
@@ -11,7 +12,7 @@ Clique em "Fazer Upgrade" para continuar.<br>
 <br>
 
 Meus Planos:
-<table class="table">
+<table class="table table-stripped">
   <tr>
     <th>Plano de Compra</th>
     <th>Cartão Utilizado</th>
@@ -21,11 +22,12 @@ Meus Planos:
   <tr>
     <td><%= upgrade.account_plan %></td>
     <td><%= upgrade.credit_card %></td>
-    <td><%= button_to 'Apagar', upgrade, method: :delete, data: { confirm: 'Tem certeza disso?' } %></td>
+    <td><%= button_to 'Apagar', upgrade, method: :delete, data: { confirm: 'Tem certeza disso?' }, :class => "btn" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'Fazer Upgrade', new_upgrade_path %>
+<%= link_to 'Fazer Upgrade', new_upgrade_path, :class => "button" %>
+</div>
