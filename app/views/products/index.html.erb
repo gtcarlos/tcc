@@ -1,21 +1,23 @@
-<h1>Listing products</h1>
+<h1>Seus produtos</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th>Name</th>
-    <th>Image</th>
-    <th>Description</th>
+    <th>Imagem</th>
+    <th>Nome</th>
+    <th>Descrição</th>
     <th>Video</th>
-    <th>Subtitle</th>
+    <th>Legenda</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @products.each do |product| %>
+<% Product.where("user_id = ?",current_user.id).each do |product| %>
   <tr>
+    <td id="avatar">
+        <%= image_tag product.photo.url, :class => "thumbnail" %>
+    </td>
     <td><%= product.name %></td>
-    <td><%= product.image %></td>
     <td><%= product.description %></td>
     <td><%= product.video %></td>
     <td><%= product.subtitle %></td>
