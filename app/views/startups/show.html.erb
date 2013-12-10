@@ -1,37 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="st_name">
+<h2><%= @startup.fantasy_name %></h2>
+</div>
 
-
-
-<p>
-  <b>Nome Fantasia:</b>
-  <%= @startup.fantasy_name %>
-</p>
-
-<p>
-  <b>CNPJ:</b>
-  <%= @startup.cnpj_duns %>
-</p>
-
-<p>
-  <b>Logo:</b>
+<div class="st_info" id="logo">
   <%= image_tag @startup.logo.url(:small) %>
-</p>
+</div>
 
-<p>
-  <b>Contact:</b>
-  <%= @startup.contact %>
-</p>
-
-<p>
-  <b>Area de Atuação:</b>
-  <%= @startup.area %>
-</p>
-
-<p>
-  <b>Endereço:</b>
-  <%= @startup.location %>
-</p>
-
-
-<%= link_to 'Edit', edit_startup_path(@startup) %> |
-<%= link_to 'Back', startups_path %>
+<div class="st_info" id="actions">
+  <span class="button_follow">
+    <% if current_user.startups.id include?(@startup) %>
+        <%= button_to 'Editar Perfil', edit_startups_path(current_user.id), :method => "get", :class => "btn btn-small btn-info" %>
+      <% elsif !current_user.friends.include?(@starup) %>
+        <%= form_for :friend, :url => friendship_index_path do |f| %>
+          <%= f.hidden_field :friend_id, value: @startup.id %>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+          <button class="btn btn-small btn-primary">Seguir</button>
+        <% end %>
+      <% else %>
+        <%= button_to 'Deixar de seguir', friendship_path, :method =>:delete, :friend_id => @user.id, :class => 'btn btn-small btn-danger', :confirm => 'Voce tem certeza?' %>
+      <% end %>
+      </span>
+    </div> <!-- info -->
+  </div> <!-- user_info -->

@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+
   <div class="field">
     <%= f.label "Bandeira do Cartão" %><br />
     <%= f.select :flag,   [['American Express', 'American Express'],['VISA', 'VISA'],['Dinners', 'Dinners'],['MasterCard', 'MasterCard']], { include_blank: true } %>
@@ -27,11 +29,12 @@
     <%= f.label "Data de Validade" %><br />
     <%= f.text_field :date %>
   </div>
+  
   <div class="field">
     <%= f.label "Codigo de Segurança" %><br />
     <%= f.text_field :seg_cod, :class => "span1"%>
-    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

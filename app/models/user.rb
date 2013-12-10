@@ -30,7 +30,10 @@ class User < ActiveRecord::Base
 
   # Credit Cards
   has_many :credit_cards
-
+  
+  # Startups
+  has_many :startups
+  
   # Badges
   has_many :badges
 
