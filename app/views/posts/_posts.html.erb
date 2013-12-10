@@ -1,3 +1,8 @@
+<% if @posts.empty? %>
+<section class="post" id="null">
+	Não há postagens para serem exibidas.
+</section>
+<% else %>
 <% @posts.each do |p| %>
 <section class="post">
 
@@ -19,7 +24,6 @@
 				</div>
 			</div>
 		</header>
-
 		<section id="post">
 			<header><hr /><header>
 			<div id="title"><h4><%= p.title %></h4></div>
@@ -30,4 +34,6 @@
 	<footer><br /><br /></footer>
 
 </section>
+<% end %>
+
 <% end %>

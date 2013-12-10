@@ -53,3 +53,19 @@ textarea {
   height: 200px;
   width: 80%;
 }
+
+.ad {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+}
+
+.investor_info {
+	clear: both;
+	dd {
+		text-align: left;
+	}
+	#bio {
+		text-align: justify;
+	}
+}
