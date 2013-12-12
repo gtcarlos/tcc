@@ -1,29 +1,19 @@
+<div class="widget-content">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @product.name %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @product.image %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @product.description %>
-</p>
-
-<p>
-  <b>Video:</b>
-  <%= @product.video %>
-</p>
-
-<p>
-  <b>Subtitle:</b>
-  <%= @product.subtitle %>
-</p>
+<div class="product_info">
+  	<div class="info">
+      <h2><%= @product.name %></h2>
+      <br/>
+    <div class="avatar">
+      <center><%= image_tag @product.photo.url(:small), :class => "thumbnail" %></center>
+    </div></ br><!-- avatar -->
+    <div class="description">
+      <%= @product.description %>
+    </div>
+    <div class="video">
+    <%= @product.video %>
+	  </div>
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
