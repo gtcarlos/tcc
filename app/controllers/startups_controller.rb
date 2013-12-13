@@ -1,5 +1,6 @@
 class StartupsController < InheritedResources::Base
 	
+
 	def show
     	@startup = Startup.find(params[:id])    
 		@posts = current_user.startups { |posts| Posts.find(posts.id) }

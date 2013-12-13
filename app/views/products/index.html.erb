@@ -4,8 +4,6 @@
   <tr>
     <th>Imagem</th>
     <th>Nome</th>
-    <th>Descrição</th>
-    <th>Video</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,11 +15,7 @@
         <%= image_tag product.photo.url, :class => "thumbnail" %>
     </td>
     <td><%= product.name %></td>
-    <td><%= product.description %></td>
-    <td><%= product.video %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar Produto', product %></td>
   </tr>
 <% end %>
 </table>
