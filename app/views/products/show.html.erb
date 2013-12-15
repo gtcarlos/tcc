@@ -2,24 +2,17 @@
 <p id="notice"><%= notice %></p>
 
 <div class="product_info">
-  	<div class="info">
+  	<div class="product_info" id="name">
       <h2><%= @product.name %></h2>
       <br/>
-    <div class="avatar">
+    <div class="product_info">
       <center><%= image_tag @product.photo.url(:small), :class => "thumbnail" %></center>
     </div><!-- avatar -->
-    <div class="description">
-      <%= @product.description %>
+    <div class="product_info">
+      <br /><hr />
+      <p align="justify"><%= @product.description %></p>
     </div>
-    <div class="video">
-    <%= @product.video %>
-	  </div>
-    <spam class="button_edit">
-    <%= if current_user.products.include? @product %>
-      <%= button_to 'Editar Produto', edit_product_path(@product), :method => "get", :class => "btn btn-small btn-info" %>
-      <% end %>
-      </span>
+    <hr/>
+  </div>
 
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
