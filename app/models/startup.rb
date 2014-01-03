@@ -1,5 +1,5 @@
 class Startup < ActiveRecord::Base
-  attr_accessible :area, :cnpj_duns, :contact, :fantasy_name, :files, :location, :logo, :message_limit, :city, :state
+  attr_accessible :area, :cnpj_duns, :contact, :fantasy_name, :files, :location, :logo, :message_limit, :city, :state, :user_id, :description
   validates_presence_of :area, :cnpj_duns, :contact, :fantasy_name, :location, :city, :state, presence => true
 
   belongs_to :user

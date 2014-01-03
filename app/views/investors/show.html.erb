@@ -9,7 +9,7 @@
       <h2><%= @investor.name %></h2>
       <br />
 			<span class="button_follow">
-			<% if @investor == current_user.investor%>
+			<% if @investor == current_user.investor %>
         <%= button_to 'Editar Perfil', edit_investor_path(current_user.investor), :method => "get", :class => "btn btn-small btn-info" %>
       <% elsif !current_user.friends.include?(@uinvestor) %>
         <%= form_for :friend, :url => friendship_index_path do |f| %>
@@ -22,6 +22,8 @@
       <% end %>
 			</span>
     </div> <!-- info -->
+    <div class="description">
+      <%= render "startup/_form" %>
   </div> <!-- user_info -->
 
   <div class="posts">

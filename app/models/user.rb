@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
     :path => ":rails_root/public/assets/users/:id/:style/:basename.:extension"
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask, :group_id, :photo, :email_policy, :company, :location, :area, :bio
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :roles, :roles_mask, :group_id, :photo, :email_policy, :fantasy_name, :cnpj_duns, :contact, :location, :city, :state, :logo, :description, :company, :location, :area, :bio
 
   roles_attribute :roles_mask
 

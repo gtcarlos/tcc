@@ -15,7 +15,7 @@ body {
 	} // avatar
 
 	.info {
-		.button_follow {
+		.button_follow,.button_products {
 			text-align: right;
 		} // button_follow
 	} // info
@@ -60,7 +60,7 @@ textarea {
 	font-size: 16px;
 }
 
-.investor_info {
+.investor_info,.st_info {
 	clear: both;
 	dd {
 		text-align: left;

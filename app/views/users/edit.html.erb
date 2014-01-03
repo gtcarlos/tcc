@@ -3,6 +3,8 @@
 
 <% if current_user.group == Group.find(3) %>
 	<%= render 'form_investor' %>
+<% elsif current_user.group == Group.find(2) %>
+	<%= render 'form_startup' %>
 <% else %>
 	<%= render 'form' %>
 <% end %>

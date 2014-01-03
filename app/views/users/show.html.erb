@@ -1,6 +1,8 @@
 <div class="widget-content">
 	<% if @user.group.eql? Group.find(3) %>
 		<%= render 'users/investor' %>
+	<% elsif @user.group.eql? Group.find(2) %>
+		<%= render 'users/startup' %>
 	<% else %>
 		<%= render 'users/user' %>
 	<% end %>

@@ -1,36 +1,20 @@
-<%= form_for(@startup) do |f| %>
-  <% if @startup.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@startup.errors.count, "error") %> prohibited this startup from being saved:</h2>
-
-      <ul>
-      <% @startup.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+<%= form_for @user, :html => { :multipart => true } do |f| %>
   <div class="field">
     <%= f.label "Nome Fantasia" %><br />
-    <%= f.text_field :fantasy_name, :class => "spam3" %>
+    <%= f.text_field :fantasy_name %>
   </div>
-
   <div class="field">
     <%= f.label "CNPJ" %><br />
-    <%= f.text_field :cnpj_duns, :class => "spam3" %>
+    <%= f.text_field :cnpj_duns %>
   </div>
-
   <div class="field">
     <%= f.label "Telefone de Contato" %><br />
-    <%= f.text_field :contact, :class => "spam3" %>
+    <%= f.text_field :contact %>
   </div>
-
   <div class="field">
     <%= f.label "Endereço" %><br />
-    <%= f.text_field :location, :class => "spam3" %>
+    <%= f.text_field :location %>
   </div>
-
   <div class="field">
     <%= f.label "Cidade" %><br />
     <%= f.select :city,   [['Águas de Lindoia', 'Aguas de Lindóia'],['Amparo', 'Amparo'],['Americana', 'Americana'],['Aparecida', 'Aparecida'],['Bauru', 'Bauru'],['Belo Horizonte', 'Belo Horizonte'],['Brasilia', 'Brasilia'],['Cabreuva', 'Cabreuva'],['Campos do Jordão', 'Campos do Jordão'],['Capela do Alto', 'Capela do Alto'],['Campinas', 'Campinas'],['Diadema', 'Diadema'],['Dobrada', 'Dobrada'],['Elias Fausto', 'Elias Fausto'],['Embu', 'Embu'],['Floreal', 'Floreal'],['Franca', 'Franca'],['Guaratingueta', 'Guaratingueta'],['Guarulhos', 'Guarulhos'],['Guarujá', 'Guarujá'],['Holambra', 'Holambra'],['Hortolandia', 'Hortolandia'],['Ilha Bela', 'Ilha Bela'],['Indaiatuba', 'Indaiatuba'],['Itu', 'Itu'],['Itupeva', 'Itupeva'],['Jundiai', 'Jundiai'],['Juqueiropolis', 'Juqueiropolis'],['Laranjal Paulista', 'Laranjal Paulista'],['Limeira', 'Limeira'],['Lindóia', 'Lindóia'],['Macatuaba', 'Macatuaba'],['Mogi Guaçu', 'Mogi Guaçu'],['Macapa', 'Macapa'],['Nova Odessa', 'Nova Odessa'],['Novais', 'Novais'],['Olimpia', 'Olimpia'],['Ouro Preto', 'Ouro Preto'],['Osasco', 'Osasco'],['Palmital', 'Palmital'],['Pirassununga', 'Pirassununga'],['Piratininga', 'Piratininga'],['Ribeirão Preto', 'Ribeirão Preto'],['Rio de Janeiro', 'Rio de Janeiro'],['Salto', 'Salto'],['São Paulo', 'São Paulo'],['Santos', 'Santos'],['Tatui', 'Tatui'],['Teodoro Sampaio', 'Teodoro Sampaio'],['Valinhos', 'Valinhos'],['Vinhedo', 'Vinhedo'],['Zacarias', 'Zacarias']], { include_blank: true }%>
@@ -44,7 +28,7 @@
   
   <div class="field">
     <%= f.label "Logotipo" %><br />
-    <%= f.file_field :logo  %>
+    <%= f.file_field :photo  %>
   </div>
 
   <div class="field">
@@ -54,12 +38,11 @@
 
   <div class="field">
     <%= f.label "Descreva sobre sua Startup" %><br />
-    <%= f.text_area :description, :class => "spam3" %>
+    <%= f.text_area :description %>
   </div>
 
-
+  
   <div class="actions">
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.submit %>
+    <%= f.submit "Enviar", :class => "btn"%>
   </div>
 <% end %>

@@ -11,7 +11,7 @@
     <th></th>
   </tr>
 
-<% @startups.each do |startup| %>
+<% Startup.where("user_id = ?",current_user.id).each do |startup| %>
   <tr>
     <td><%= startup.fantasy_name %></td>
     <td><%= startup.city %></td>

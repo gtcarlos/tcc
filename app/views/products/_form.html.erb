@@ -18,22 +18,19 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :photo, "Imagem do produto" %>
+    <%= f.label :photo, "Imagem do Produto" %>
     <%= f.file_field :photo %>
   </div>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label "Descrição do Produto" %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :video %><br />
+    <%= f.label "Link Youtube:" %><br />
     <%= f.text_field :video %>
   </div>
-  <div class="field">
-    <%= f.label :subtitle %><br />
-    <%= f.text_field :subtitle %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

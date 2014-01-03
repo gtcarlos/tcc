@@ -1,3 +1,60 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+textarea {
+  height: 200px;
+  width: 80%;
+}
+
+body {
+  margin: 0px 100px 100px 100px;
+}
+
+.product_info {
+
+	text-align: center;
+
+	.avatar {
+		float: left;
+	} // avatar
+
+	.info {
+		.button_edit, .button_delete {
+			text-align: right;
+		} // buttons
+	} // info
+
+	bio {
+		text-align: justify;
+	}
+}
+
+} // product_info
+
+
+.posts {
+	clear: both;
+
+	h3 {
+		text-align: center;
+	}
+} // posts
+
+#email_policy {
+  label, input[type="radio"] {
+    float: left;
+  }
+
+  input {
+    clear: left;
+  }
+
+}
+
+#email_submit {
+  clear: both;
+}
+
+table {
+  text-align: center;
+}
